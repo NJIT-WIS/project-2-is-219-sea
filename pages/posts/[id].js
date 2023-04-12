@@ -6,18 +6,35 @@ import utilStyles from '../../styles/utils.module.css'
 
 export default function Post({ postData }) {
   return (
-    <Layout>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
-      <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
-          <Date dateString={postData.date} />
-        </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
-    </Layout>
+    <>
+      <NextSeo
+        title={postData.title}
+        description="This is a demo description"
+        canonical="https://www.NeuralNexus.com"
+        openGraph={{
+          url: 'https://www.NeuralNexus.com',
+          title: 'Open Graph Title',
+          description: 'Open Graph Description',
+        }}
+        twitter={{
+          handle: '@NeuralNexus',
+          site: '@NeuralNexus.com',
+          cardType: 'summary_large_image',
+        }}
+      />
+      <Layout>
+        <Head>
+          <title>{postData.title}</title>
+        </Head>
+        <article>
+          <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+          <div className={utilStyles.lightText}>
+            <Date dateString={postData.date} />
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </article>
+      </Layout>
+    </>
   )
 }
 
