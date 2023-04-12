@@ -1,8 +1,10 @@
-import Layout from '../../components/layout'
-import { getAllPostIds, getPostData } from '../../lib/posts'
-import Head from 'next/head'
-import Date from '../../components/date'
-import utilStyles from '../../styles/utils.module.css'
+import Layout from "../../components/layout";
+import { getAllPostIds, getPostData } from "../../lib/posts";
+import Head from "next/head";
+import Date from "../../components/date";
+import utilStyles from "../../styles/utils.module.css";
+
+import { NextSeo } from "next-seo";
 
 export default function Post({ postData }) {
   return (
@@ -12,14 +14,14 @@ export default function Post({ postData }) {
         description="This is a demo description"
         canonical="https://www.NeuralNexus.com"
         openGraph={{
-          url: 'https://www.NeuralNexus.com',
-          title: 'Open Graph Title',
-          description: 'Open Graph Description',
+          url: "https://www.NeuralNexus.com",
+          title: "Open Graph Title",
+          description: "Open Graph Description",
         }}
         twitter={{
-          handle: '@NeuralNexus',
-          site: '@NeuralNexus.com',
-          cardType: 'summary_large_image',
+          handle: "@NeuralNexus",
+          site: "@NeuralNexus.com",
+          cardType: "summary_large_image",
         }}
       />
       <Layout>
@@ -35,22 +37,22 @@ export default function Post({ postData }) {
         </article>
       </Layout>
     </>
-  )
+  );
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds()
+  const paths = getAllPostIds();
   return {
     paths,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id)
+  const postData = await getPostData(params.id);
   return {
     props: {
-      postData
-    }
-  }
+      postData,
+    },
+  };
 }
