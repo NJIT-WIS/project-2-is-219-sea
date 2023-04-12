@@ -3,17 +3,18 @@
 This log will be used to determine project contributions and evaluate if each
 member made adequate and equal contributions to the project.
 
-| Issue Title                                       | Story Points | Issue Link                                                             | Status | Assigned To                | Assigned On | Completed On | Category      | Status Notes                         |
-| ------------------------------------------------- | ------------ | ---------------------------------------------------------------------- | ------ | -------------------------- | ----------- | ------------ | ------------- | ------------------------------------ |
-| Configuring, setting up, and initializing project | 5            | [Issue 8](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/8)   | Done   | Stephen Ebrahim (se6-njit) | 04/10/23    | 4/11/23      | documentation | Finsihed setting up project          |
-| Integrate Tailwind CSS framework                  | 3            | [Issue 2](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/2)   | Done   | Stephen Ebrahim (se6-njit) | 04/10/23    | 4/11/23      | user story    | configured and completed integration |
-| Initialize site styling                           | 5            | [Issue 11](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/11) | Done   | Stephen Ebrahim (se6-njit) | 04/11/23    | 4/11/23      | user story    | completed styling and \_doc, \_app   |
+| Issue Title                                       | Story Points | Issue Link                                                             | Status | Assigned To                | Assigned On | Completed On | Category      | Status Notes                                 |
+| ------------------------------------------------- | ------------ | ---------------------------------------------------------------------- | ------ | -------------------------- | ----------- | ------------ | ------------- | -------------------------------------------- |
+| Configuring, setting up, and initializing project | 5            | [Issue 8](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/8)   | Done   | Stephen Ebrahim (se6-njit) | 04/10/23    | 4/11/23      | documentation | Finsihed setting up project                  |
+| Integrate Tailwind CSS framework                  | 3            | [Issue 2](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/2)   | Done   | Stephen Ebrahim (se6-njit) | 04/10/23    | 4/11/23      | user story    | configured and completed integration         |
+| Initialize site styling                           | 5            | [Issue 11](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/11) | Done   | Stephen Ebrahim (se6-njit) | 04/11/23    | 4/11/23      | user story    | completed styling and \_doc, \_app           |
+| Create header and navbar                          | 2            | [Issue 3](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/3)   | Done   | Stephen Ebrahim (se6-njit) | 04/10/23    | 4/11/23      | user story    | completed initial draft of navbar and header |
 
 ## Accumulating Contributions
 
 | Team Member                | Total Story Points |
 | -------------------------- | ------------------ |
-| Stephen Ebrahim (se6-njit) | 13                 |
+| Stephen Ebrahim (se6-njit) | 15                 |
 | Ebram Mekhail              |                    |
 | Aryan Nesti                |                    |
 
@@ -25,6 +26,6 @@ member made adequate and equal contributions to the project.
 
 | Team Member                | Rating        |
 | -------------------------- | ------------- |
-| Stephen Ebrahim (se6-njit) | 13 / 3 = 4.33 |
+| Stephen Ebrahim (se6-njit) | 15 / 4 = 3.75 |
 | Ebram Mekhail              |               |
 | Aryan Nesti                |               |

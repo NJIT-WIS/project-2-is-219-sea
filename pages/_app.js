@@ -1,10 +1,18 @@
 import "../styles/global.css";
 import "../styles/tailwind.css";
-import "../styles/prism.css";
+import "@/styles/prism.css";
 
-import { ThemeProvider } from "next-themes";
+// next components
 import Head from "next/head";
-import siteMetadata from "../data/siteMetadata";
+
+// node packages
+import { ThemeProvider } from "next-themes";
+
+// components
+import PageWrapper from "@/components/PageWrapper";
+
+// others
+import siteMetadata from "@/data/siteMetadata";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -12,7 +20,9 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
-      <Component {...pageProps} />
+      <PageWrapper>
+        <Component {...pageProps} />
+      </PageWrapper>
     </ThemeProvider>
   );
 }
