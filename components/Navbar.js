@@ -4,7 +4,7 @@ import Logo from "@/components/Logo";
 import Link from "@/components/Link";
 
 import MobileNav from "./MobileNav";
-// import ThemeSwitch from "./ThemeSwitch";
+import ThemeSwitch from "./ThemeSwitch";
 
 const Navbar = () => {
   return (
@@ -42,7 +42,7 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        {/* <ThemeSwitch /> */}
+        <ThemeSwitch />
         <MobileNav />
       </div>
     </header>
