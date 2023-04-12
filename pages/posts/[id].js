@@ -10,14 +10,19 @@ export default function Post({ postData }) {
   return (
     <>
       {/* Google tag (gtag.js) */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-QKD03YMMCM"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)};
-        gtag('js', new Date());
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-QKD03YMMCM"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-        gtag('config', 'G-QKD03YMMCM');
-      </script>
+          gtag('config', 'GA_MEASUREMENT_ID');
+        `}
+      </Script>
       <NextSeo
         title={postData.title}
         description="This is a demo description"
