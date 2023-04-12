@@ -16,15 +16,20 @@ import { NextSeo } from "next-seo";
 export default function Home({ allPostsData }) {
   return (
     <>
-      {/* Google tag (gtag.js) */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-QKD03YMMCM"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)};
-        gtag('js', new Date());
+      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-        gtag('config', 'G-QKD03YMMCM');
-      </script>
+          gtag('config', 'GA_MEASUREMENT_ID');
+        `}
+      </Script>
       <NextSeo
         title="Neural Nexus"
         description="This is a demo description"

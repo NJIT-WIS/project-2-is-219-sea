@@ -14,7 +14,8 @@ member made adequate and equal contributions to the project.
 | Deploy Next.js site to GitHub Pages               | 5            | [Issue 1](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/1)   | Done   | Ebram Mekhail (ebrammekhail) | 04/11/23    | 4/12/23      | devops        | fixed the yml file to automatically deploy main branch to github pages |
 | Deploy Next.js site to GitHub Pages               | 1            | [Issue 20](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/20) | Done   | Aryan Nesti (aryannesti)     | 04/12/23    | 4/12/23      | Bug Fix       | fixed the image on the main page                                       |
 | Creating homepage UI                              | 3            | [Issue 22](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/22) | Done   | Stephen Ebrahim (se6-njit)   | 04/12/23    | 4/12/23      | user story    | completed draft of homepage UI                                         |
-| Implementing OpenGraph                            | 1            | [Issue 24](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/24) | Done   | Aryan Nesti (aryannesti)     | 04/12/23    | 4/12/23      | user story    | Added Meta Tags for twitter and OpenGraph                              |
+| Implementing OpenGraph                            | 3            | [Issue 24](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/24) | Done   | Aryan Nesti (aryannesti)     | 04/12/23    | 4/12/23      | user story    | added Meta Tags for twitter and OpenGraph                              |
+| Implementing Google Analytics                            | 5            | [Issue 7](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/7) | Done   | Aryan Nesti (aryannesti)     | 04/12/23    | 4/12/23      | user story    | added script tags for google analytics                              |
 
 ## Accumulating Contributions
 
@@ -22,7 +23,7 @@ member made adequate and equal contributions to the project.
 | -------------------------- | ------------------ |
 | Stephen Ebrahim (se6-njit) | 23                 |
 | Ebram Mekhail              | 5                  |
-| Aryan Nesti                | 3                   |
+| Aryan Nesti                | 10                 |
 
 ## Productivity Rating Calculation
 
@@ -34,4 +35,4 @@ member made adequate and equal contributions to the project.
 | -------------------------- | ------------- |
 | Stephen Ebrahim (se6-njit) | 23 / 7 = 3.23 |
 | Ebram Mekhail              | 5 / 1 = 5     |
-| Aryan Nesti                | 3/3           |
+| Aryan Nesti                | 10/2 = 5      |
