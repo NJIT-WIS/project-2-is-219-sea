@@ -9,6 +9,15 @@ import { NextSeo } from "next-seo";
 export default function Post({ postData }) {
   return (
     <>
+      {/* Google tag (gtag.js) */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-QKD03YMMCM"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+
+        gtag('config', 'G-QKD03YMMCM');
+      </script>
       <NextSeo
         title={postData.title}
         description="This is a demo description"
