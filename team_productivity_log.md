@@ -16,7 +16,7 @@ member made adequate and equal contributions to the project.
 
 | Team Member                | Total Story Points |
 | -------------------------- | ------------------ |
-| Stephen Ebrahim (se6-njit) | 18                 |
+| Stephen Ebrahim (se6-njit) | 20                 |
 | Ebram Mekhail              |                    |
 | Aryan Nesti                |                    |
 
@@ -26,8 +26,8 @@ member made adequate and equal contributions to the project.
   points that each they completed and then divide that by the number of issues
   to come up with a productivity rating.
 
-| Team Member                | Rating       |
-| -------------------------- | ------------ |
-| Stephen Ebrahim (se6-njit) | 18 / 5 = 3.6 |
-| Ebram Mekhail              |              |
-| Aryan Nesti                |              |
+| Team Member                | Rating        |
+| -------------------------- | ------------- |
+| Stephen Ebrahim (se6-njit) | 20 / 6 = 3.33 |
+| Ebram Mekhail              |               |
+| Aryan Nesti                |               |
