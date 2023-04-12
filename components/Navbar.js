@@ -3,7 +3,7 @@ import headerNavLinks from "@/data/headerNavLinks";
 import Logo from "@/components/Logo";
 import Link from "@/components/Link";
 
-// import MobileNav from "./MobileNav";
+import MobileNav from "./MobileNav";
 // import ThemeSwitch from "./ThemeSwitch";
 
 const Navbar = () => {
@@ -42,8 +42,8 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        {/* <ThemeSwitch />
-        <MobileNav /> */}
+        {/* <ThemeSwitch /> */}
+        <MobileNav />
       </div>
     </header>
   );
