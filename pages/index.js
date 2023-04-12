@@ -18,7 +18,7 @@ export default function Home({ allPostsData }) {
     <>
       {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+        src="https://www.googletagmanager.com/gtag/js?id=G-QKD03YMMCM"
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
