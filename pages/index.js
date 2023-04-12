@@ -11,6 +11,7 @@ import Image from "next/image";
 
 import Date from "../components/date";
 import styles from "../components/layout.module.css";
+import { NextSeo } from "next-seo";
 
 export default function Home({ allPostsData }) {
   return (
@@ -20,14 +21,14 @@ export default function Home({ allPostsData }) {
         description="This is a demo description"
         canonical="https://www.NeuralNexus.com"
         openGraph={{
-          url: 'https://www.NeuralNexus.com',
-          title: 'Open Graph Title',
-          description: 'Open Graph Description',
+          url: "https://www.NeuralNexus.com",
+          title: "Open Graph Title",
+          description: "Open Graph Description",
         }}
         twitter={{
-          handle: '@NeuralNexus',
-          site: '@NeuralNexus.com',
-          cardType: 'summary_large_image',
+          handle: "@NeuralNexus",
+          site: "@NeuralNexus.com",
+          cardType: "summary_large_image",
         }}
       />
       <div className={styles.container}>
@@ -65,10 +66,10 @@ export default function Home({ allPostsData }) {
             Welcome to MyWebClass.org, your go-to resource for exploring the
             possibilities of AI and advanced engineering tools in the classroom.
             Our mission is to empower educators to unleash their creativity and
-            enhance the learning experience for students of all backgrounds. Join
-            our community and discover how you can harness the power of AI to
-            revolutionize the way you teach and engage with your students. Let's
-            transform education together!
+            enhance the learning experience for students of all backgrounds.
+            Join our community and discover how you can harness the power of AI
+            to revolutionize the way you teach and engage with your students.
+            Let's transform education together!
           </p>
         </main>
       </div>
