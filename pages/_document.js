@@ -15,7 +15,7 @@ class MyDocument extends Document {
             content="#000"
           />
         </Head>
-        <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
+        <body className="bg-white text-black antialiased dark:bg-gray-800 dark:text-white">
           <Main />
           <NextScript />
         </body>
