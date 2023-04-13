@@ -15,20 +15,6 @@ import { NextSeo } from "next-seo";
 export default function Home({ allPostsData }) {
   return (
     <>
-      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-QKD03YMMCM"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'GA_MEASUREMENT_ID');
-        `}
-      </Script>
       <NextSeo
         title="Neural Nexus"
         description="This is a demo description"
