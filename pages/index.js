@@ -35,8 +35,8 @@ export default function Home({ allPostsData }) {
         canonical="https://www.NeuralNexus.com"
         openGraph={{
           url: "https://www.NeuralNexus.com",
-          title: "Open Graph Title",
-          description: "Open Graph Description",
+          title: "Neural Nexus",
+          description: "Neural Nexus is a Blog webpage for AI advances",
         }}
         twitter={{
           handle: "@NeuralNexus",
