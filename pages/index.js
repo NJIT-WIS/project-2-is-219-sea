@@ -3,8 +3,6 @@ import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
-import Script from 'next/script'
-
 import UndrawTeaching from "../public/svgs/undraw_teaching.svg";
 
 import Script from "next/script";
