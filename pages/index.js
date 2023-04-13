@@ -36,7 +36,7 @@ export default function Home({ allPostsData }) {
         openGraph={{
           url: "https://www.NeuralNexus.com",
           title: "Neural Nexus",
-          description: "Neural Nexus is a Blog webpage for AI advances",
+          description: "Welcome to Neural Nexus, the blog webpage that explores the exciting and ever-evolving world of artificial intelligence. From neural networks and deep learning to machine learning and natural language processing, we delve into the latest advancements and applications of AI across various industries and fields.s",
         }}
         twitter={{
           handle: "@NeuralNexus",
