@@ -4,10 +4,26 @@ import utilStyles from "@/styles/utils.module.css";
 import { getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
 import Date from "@/components/date";
+import { NextSeo } from "next-seo";
 
 export default function Home({ allPostsData }) {
   return (
     <>
+      <NextSeo
+          title="Neural Nexus"
+          description="This is a demo description"
+          canonical="https://www.NeuralNexus.com"
+          openGraph={{
+            url: "https://www.NeuralNexus.com",
+            title: "Neural Nexus",
+            description: "Blogs Page",
+          }}
+          twitter={{
+            handle: "@NeuralNexus",
+            site: "@NeuralNexus.com",
+            cardType: "summary_large_image",
+          }}
+      />
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
