@@ -5,9 +5,13 @@
         "title": "Neural Nexus"
       },
       {
-        "path": "/about",
-        "title": "Neural Nexus | About"
+        "path": "/blog",
+        "title": "Neural Nexus | Blog"
       }
+      //{
+      //  "path": "/about",
+      //  "title": "Neural Nexus | About"
+      //}
     ]
 }
   
