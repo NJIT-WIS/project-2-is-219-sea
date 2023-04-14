@@ -16,8 +16,8 @@ export default function Post({ postData }) {
         canonical="https://www.NeuralNexus.com"
         openGraph={{
           url: "https://www.NeuralNexus.com",
-          title: "Neural Nexus",
-          description: postData.title,
+          title: postData.title,
+          description: "Neural Nexus",
         }}
         twitter={{
           handle: "@NeuralNexus",
