@@ -15,7 +15,8 @@ member made adequate and equal contributions to the project.
 | Deploy Next.js site to GitHub Pages               | 1            | [Issue 20](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/20) | Done   | Aryan Nesti (aryannesti)     | 04/12/23    | 4/12/23      | Bug Fix       | fixed the image on the main page                                       |
 | Creating homepage UI                              | 3            | [Issue 22](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/22) | Done   | Stephen Ebrahim (se6-njit)   | 04/12/23    | 4/12/23      | user story    | completed draft of homepage UI                                         |
 | Implementing OpenGraph                            | 3            | [Issue 24](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/24) | Done   | Aryan Nesti (aryannesti)     | 04/12/23    | 4/12/23      | user story    | added Meta Tags for twitter and OpenGraph                              |
-| Implementing Google Analytics                            | 5            | [Issue 7](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/7) | Done   | Aryan Nesti (aryannesti)     | 04/12/23    | 4/12/23      | user story    | added script tags for google analytics                              |
+| Implementing Google Analytics                     | 5            | [Issue 7](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/7)   | Done   | Aryan Nesti (aryannesti)     | 04/12/23    | 4/12/23      | user story    | added script tags for google analytics                                 |
+| Implement Playwright testing                      | 5            | [Issue 25](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/25) | Done   | Ebram Mekhail (ebrammekhail) | 04/12/23    | 4/13/23      | devops        | fixed the yml file to automatically using playwright to test the code  |
 
 ## Accumulating Contributions
 
