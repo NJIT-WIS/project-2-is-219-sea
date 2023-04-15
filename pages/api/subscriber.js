@@ -1,6 +1,11 @@
 import axios from "axios";
 
-const subscribe = async (email) => {
+export default async (req, res) => {
+  const { email } = req.body
+
+  if (!email || !email.length) {
+    return res.status(400).json({ error: 'Email is required' })
+  }
   const API_KEY = process.env.MAILCHIMP_API_KEY;
   const API_SERVER = process.env.MAILCHIMP_API_SERVER;
   const AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID;
@@ -34,5 +39,3 @@ const subscribe = async (email) => {
     return { error: error.message };
   }
 };
-
-export default subscribe;
