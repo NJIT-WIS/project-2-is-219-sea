@@ -7,7 +7,7 @@ const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
 
 export default defineConfig({
-  basePath: "/studio",
+  basePath: "/project-2-is-219-sea/studio",
   name: 'Neural_Nexus_Studio',
   title: 'Neural Nexus Studio',
 
