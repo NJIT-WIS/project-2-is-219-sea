@@ -20,14 +20,15 @@ member made adequate and equal contributions to the project.
 | Implement ChimpMail                               | 8            | [Issue 4](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/4)   | Done   | Aryan Nesti (aryannesti)     | 04/12/23    | 4/13/23      | user story    | users can subscribe to newsletter sent by ChimpMail                    |
 | Implement UI for Mailchimp Subscribe              | 5            | [Issue 30](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/30) | Done   | Stephen Ebrahim (se6-njit)   | 04/14/23    | 4/14/23      | user story    | created modal component and validation for subscribing                 |
 | Implementing Sanity.io as a Headless CMS          | 8            | [Issue 31](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/31) | Done   | Ebram Mekhail (ebrammekhail) | 04/14/23    | 4/14/23      | user story    | Using Sanity.io as a headless CMS to manage and post content to Blogs  |
+| Fixing dependency issue                           | 5            | [Issue 36](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/36) | Done   | Stephen Ebrahim (se6-njit)   | 04/15/23    | 4/15/23      | bug fix       | Fixed dependency issue by using a different package for snackbar ui    |
 
 
 ## Accumulating Contributions
 
 | Team Member                | Total Story Points |
 | -------------------------- | ------------------ |
-| Stephen Ebrahim (se6-njit) | 28                 |
-| Ebram Mekhail              | 18                  |
+| Stephen Ebrahim (se6-njit) | 33                 |
+| Ebram Mekhail              | 18                 |
 | Aryan Nesti                | 18                 |
 
 ## Productivity Rating Calculation
@@ -38,6 +39,6 @@ member made adequate and equal contributions to the project.
 
 | Team Member                | Rating        |
 | -------------------------- | ------------- |
-| Stephen Ebrahim (se6-njit) | 28 / 8 = 3.5  |
+| Stephen Ebrahim (se6-njit) | 33 / 9 = 3.67 |
 | Ebram Mekhail              | 18 / 3 = 6    |
 | Aryan Nesti                | 18 / 4 = 4.5  |
