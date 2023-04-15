@@ -10,10 +10,15 @@ export default function SubscribeModal({ btnClassName }) {
   let [email, setEmail] = useState("");
 
   const [openSuccessSnackbar, closeSuccessSnackbar] = useSnackbar({
+    position: "top-center",
     style: { backgroundColor: "#509B52", color: "black" },
+    closeStyle: { color: "black" },
   });
+
   const [openErrorSnackbar, closeErrorSnackbar] = useSnackbar({
+    position: "top-center",
     style: { backgroundColor: "#D84A47", color: "white" },
+    closeStyle: { color: "white" },
   });
 
   const subscribe = async (e) => {
@@ -34,8 +39,13 @@ export default function SubscribeModal({ btnClassName }) {
         Authorization: `api_key ${API_KEY}`,
       },
     };
-  }
-  
+
+    // openErrorSnackbar("Error subscribing. Please try again.");
+    // openSuccessSnackbar("Succssfully subscribed. Thank you!");
+
+    closeModal();
+  };
+
   // const mailchimpSubscribe = async () => {
   //   // TODO: actually subscribe using mailchimp
 
