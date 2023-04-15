@@ -19,7 +19,7 @@ export default function SubscribeModal({ btnClassName }) {
     e.preventDefault()
 
     try {
-      const response = await axios.post('/api/subscribe', { email })
+      const response = await axios.post('./api/subscribe', { email })
       openSuccessSnackbar(
         "Successfully Subscribed to newsletter. Thank you!"
       );
