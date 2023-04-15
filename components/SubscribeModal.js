@@ -17,9 +17,9 @@ export default function SubscribeModal({ btnClassName }) {
   });
 
   const subscribe = async (e) => {
-    const API_KEY = MAILCHIMP_API_KEY;
-    const API_SERVER = MAILCHIMP_API_SERVER;
-    const AUDIENCE_ID = MAILCHIMP_AUDIENCE_ID;
+    const API_KEY = secrets.MAILCHIMP_API_KEY;
+    const API_SERVER = secrets.MAILCHIMP_API_SERVER;
+    const AUDIENCE_ID = secrets.MAILCHIMP_AUDIENCE_ID;
 
     const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`;
 
