@@ -19,6 +19,7 @@ member made adequate and equal contributions to the project.
 | Implement Playwright testing                      | 5            | [Issue 25](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/25) | Done   | Ebram Mekhail (ebrammekhail) | 04/12/23    | 4/13/23      | devops        | fixed the yml file to automatically using playwright to test the code  |
 | Implement ChimpMail                               | 8            | [Issue 4](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/4)   | Done   | Ebram Mekhail (ebrammekhail) | 04/12/23    | 4/13/23      | user story    | users can subscribe to newsletter sent by ChimpMail                    |
 | Implement UI for Mailchimp Subscribe              | 5            | [Issue 30](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/30) | Done   | Stephen Ebrahim (se6-njit)   | 04/14/23    | 4/14/23      | user story    | created modal component and validation for subscribing                 |
+| Implement UI for Mailchimp Subscribe              | 8            | [Issue 31](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/31) | Done   | Ebram Mekhail (ebrammekhail) | 04/14/23    | 4/14/23      | user story    | Using Sanity.io as a headless CMS to manage and post content to Blogs  |
 
 
 ## Accumulating Contributions
