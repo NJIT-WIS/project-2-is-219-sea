@@ -11,6 +11,8 @@ import Image from "next/image";
 import Date from "../components/date";
 import styles from "../components/layout.module.css";
 import { NextSeo } from "next-seo";
+import SubscribeModal from "@/components/SubscribeModal";
+import SnackbarProvider from "react-simple-snackbar";
 
 export default function Home({ allPostsData }) {
   return (
@@ -22,7 +24,8 @@ export default function Home({ allPostsData }) {
         openGraph={{
           url: "https://www.NeuralNexus.com",
           title: "Neural Nexus",
-          description: "Welcome to Neural Nexus, the blog webpage that explores the exciting and ever-evolving world of artificial intelligence. From neural networks and deep learning to machine learning and natural language processing, we delve into the latest advancements and applications of AI across various industries and fields.s",
+          description:
+            "Welcome to Neural Nexus, the blog webpage that explores the exciting and ever-evolving world of artificial intelligence. From neural networks and deep learning to machine learning and natural language processing, we delve into the latest advancements and applications of AI across various industries and fields.s",
         }}
         twitter={{
           handle: "@NeuralNexus",
@@ -58,7 +61,7 @@ export default function Home({ allPostsData }) {
             Engage, Innovate, and Transform with AI-Powered Engineering Tools
           </h1>
 
-          <UndrawTeaching className="svg-sizer" />
+          <UndrawTeaching className="svg my-10" />
         </header>
         <main>
           <p>
@@ -70,6 +73,15 @@ export default function Home({ allPostsData }) {
             to revolutionize the way you teach and engage with your students.
             Let's transform education together!
           </p>
+          <div className="my-4">
+            <p>
+              Interested and would like to learn more? Stay up to date and
+              subscribe to our newsletter!
+            </p>
+            <SnackbarProvider>
+              <SubscribeModal btnClassName="flex justify-end mt-8" />
+            </SnackbarProvider>
+          </div>
         </main>
       </div>
     </>

@@ -11,19 +11,19 @@ export default function Home({ allPostsData }) {
   return (
     <>
       <NextSeo
-          title="Neural Nexus"
-          description="This is a demo description"
-          canonical="https://www.NeuralNexus.com"
-          openGraph={{
-            url: "https://www.NeuralNexus.com",
-            title: "Neural Nexus",
-            description: "Blogs Page",
-          }}
-          twitter={{
-            handle: "@NeuralNexus",
-            site: "@NeuralNexus.com",
-            cardType: "summary_large_image",
-          }}
+        title="Neural Nexus"
+        description="This is a demo description"
+        canonical="https://www.NeuralNexus.com"
+        openGraph={{
+          url: "https://www.NeuralNexus.com",
+          title: "Neural Nexus",
+          description: "Blogs Page",
+        }}
+        twitter={{
+          handle: "@NeuralNexus",
+          site: "@NeuralNexus.com",
+          cardType: "summary_large_image",
+        }}
       />
       <Layout home>
         <Head>
@@ -50,7 +50,7 @@ export default function Home({ allPostsData }) {
             ))}
           </ul>
         </section>
-        <Subscribe></Subscribe>
+        {/* <Subscribe></Subscribe> */}
       </Layout>
     </>
   );
