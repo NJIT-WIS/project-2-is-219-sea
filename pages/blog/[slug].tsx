@@ -19,12 +19,12 @@ const Post = (props) => {
       <h1>
         Title: {props.title}
       </h1>
-      <p>
+      <div>
         categories:
         {props.categories.map(category => (
-                <div>{category.title}</div>
+                <p>{category.title}</p>
         ))}
-      </p>
+      </div>
         {/* Same thing for images */}
       <div>
         Images:
@@ -33,11 +33,11 @@ const Post = (props) => {
             alt={props.author.name}
           />
       </div>
-        {/* This took alot of time dont change it too much */}
+      <div>
         {props.body.map(block => (
-          <p>{block.children[0].text}</p>
-        ))}
-
+            <p className='text-right'>{block.children[0].text}</p>
+          ))}
+      </div>
     </div>
   )
 }
