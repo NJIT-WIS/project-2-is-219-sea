@@ -18,13 +18,14 @@ member made adequate and equal contributions to the project.
 | Implementing Google Analytics                     | 5            | [Issue 7](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/7)   | Done   | Aryan Nesti (aryannesti)     | 04/12/23    | 4/12/23      | user story    | added script tags for google analytics                                 |
 | Implement Playwright testing                      | 5            | [Issue 25](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/25) | Done   | Ebram Mekhail (ebrammekhail) | 04/12/23    | 4/13/23      | devops        | fixed the yml file to automatically using playwright to test the code  |
 | Implement ChimpMail                               | 8            | [Issue 4](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/4)   | Done   | Ebram Mekhail (ebrammekhail) | 04/12/23    | 4/13/23      | user story    | users can subscribe to newsletter sent by ChimpMail                    |
+| Implement UI for Mailchimp Subscribe              | 5            | [Issue 30](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/30) | Done   | Stephen Ebrahim (se6-njit)   | 04/14/23    | 4/14/23      | user story    | created modal component and validation for subscribing                 |
 
 
 ## Accumulating Contributions
 
 | Team Member                | Total Story Points |
 | -------------------------- | ------------------ |
-| Stephen Ebrahim (se6-njit) | 23                 |
+| Stephen Ebrahim (se6-njit) | 28                 |
 | Ebram Mekhail              | 5                  |
 | Aryan Nesti                | 18                 |
 
@@ -36,6 +37,6 @@ member made adequate and equal contributions to the project.
 
 | Team Member                | Rating        |
 | -------------------------- | ------------- |
-| Stephen Ebrahim (se6-njit) | 23 / 7 = 3.23 |
+| Stephen Ebrahim (se6-njit) | 28 / 8 = 3.5  |
 | Ebram Mekhail              | 5 / 1 = 5     |
 | Aryan Nesti                | 18 / 4 = 4.5  |
