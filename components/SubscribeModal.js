@@ -3,6 +3,7 @@ import { Fragment, useState } from "react";
 import { useSnackbar } from "react-simple-snackbar";
 // import subscribe from "../pages/api/subscriber";
 import axios from "axios";
+import Subscribe from "./Subscribe";
 
 export default function SubscribeModal({ btnClassName }) {
   let [isOpen, setIsOpen] = useState(false);
@@ -151,6 +152,7 @@ export default function SubscribeModal({ btnClassName }) {
                       Cancel
                     </button>
                   </div>
+                  <Subscribe></Subscribe>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
