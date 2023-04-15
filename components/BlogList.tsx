@@ -1,5 +1,4 @@
 import groq from 'groq'
-import Image from 'next/image'
 import urlFor from '../lib/urlFor'
 import ClientSideRoute from './ClientSideRoute'
 
@@ -19,7 +18,7 @@ export function BlogList({data}) {
         return (
           <ClientSideRoute key={post._id} route={`/blog/${post.slug.current}`}>
             <div>
-              {/* <Image
+              {/* <img
                 src={urlFor(post.mainImage).url()}
                 alt={post.author.name}
               /> */}

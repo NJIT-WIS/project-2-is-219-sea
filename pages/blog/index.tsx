@@ -1,17 +1,16 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "@/components/layout";
+import Layout, { siteTitle } from "../../components/layout";
 import utilStyles from "@/styles/utils.module.css";
 // import { getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
-import Date from "@/components/date";
-import Subscribe from "@/components/Subscribe";
+import Date from "../../components/date";
 import { NextSeo } from "next-seo";
-import {PreviewSuspense} from 'next-sanity/preview'
-import {lazy} from 'react'
-import {BlogList, query} from 'components/BlogList'
-import {client} from 'lib/sanity.client'
+// import {PreviewSuspense} from 'next-sanity/preview'
+// import {lazy} from 'react'
+import {BlogList, query} from '../../components/BlogList'
+import {client} from '../../lib/sanity.client'
 
-const PreviewBlogList = lazy(() => import('components/PreviewBlogList'))
+// const PreviewBlogList = lazy(() => import('../../components/PreviewBlogList'))
 
 export const getStaticProps = async ({preview = false}) => {
   if (preview) {
@@ -24,13 +23,13 @@ export const getStaticProps = async ({preview = false}) => {
 }
 
 export default function IndexPage({preview, data}) {
-  if (preview) {
-    return (
-      <PreviewSuspense fallback="Loading...">
-        <PreviewBlogList />
-      </PreviewSuspense>
-    )
-  }
+  // if (preview) {
+  //   return (
+  //     <PreviewSuspense fallback="Loading...">
+  //       <PreviewBlogList />
+  //     </PreviewSuspense>
+  //   )
+  // }
 
   return <BlogList data={data} />
 }
