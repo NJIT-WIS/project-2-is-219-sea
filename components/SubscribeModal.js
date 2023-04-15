@@ -17,18 +17,23 @@ export default function SubscribeModal({ btnClassName }) {
   });
 
   const subscribe = async (e) => {
-    e.preventDefault()
+    const API_KEY = MAILCHIMP_API_KEY;
+    const API_SERVER = MAILCHIMP_API_SERVER;
+    const AUDIENCE_ID = MAILCHIMP_AUDIENCE_ID;
 
-    try {
-      const response = await axios.post('./api/subscribe', { email })
-      openSuccessSnackbar(
-        "Successfully Subscribed to newsletter. Thank you!"
-      );
-      console.log(email)
-    } catch (e) {
-      openErrorSnackbar("Error subscribing. Please try again.");
-      console.log(e);
-    }
+    const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`;
+
+    const data = {
+      email_address: email,
+      status: "subscribed",
+    };
+
+    const options = {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `api_key ${API_KEY}`,
+      },
+    };
   }
   
   // const mailchimpSubscribe = async () => {
