@@ -1,68 +1,63 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import { useSnackbar } from "react-simple-snackbar";
-// import subscribe from "../pages/api/subscriber";
-import axios from "axios";
-import Subscribe from "./Subscribe";
+
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 export default function SubscribeModal({ btnClassName }) {
   let [isOpen, setIsOpen] = useState(false);
   let [email, setEmail] = useState("");
+  let [successSnackbarOpen, setSuccessSnackbarOpen] = useState(false);
+  let [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
 
-  const [openSuccessSnackbar, closeSuccessSnackbar] = useSnackbar({
-    position: "top-center",
-    style: { backgroundColor: "#509B52", color: "black" },
-    closeStyle: { color: "black" },
-  });
+  // TODO: Aryan, here you would implement mailchimp subscribe
+  const subscribe = async (email) => {
+    const response = await subscribe(email);
+    // response
+    //   .then((_) => {
+    //     openSuccessSnackbar(
+    //       "Successfully Subscribed to newsletter. Thank you!"
+    //     );
+    //   })
+    //   .catch((e) => {
+    //     openErrorSnackbar("Error subscribing. Please try again.");
+    //     console.err(e);
+    //   });
 
-  const [openErrorSnackbar, closeErrorSnackbar] = useSnackbar({
-    position: "top-center",
-    style: { backgroundColor: "#D84A47", color: "white" },
-    closeStyle: { color: "white" },
-  });
+    // const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`;
 
-  const subscribe = async (e) => {
-    const API_KEY = secrets.MAILCHIMP_API_KEY;
-    const API_SERVER = secrets.MAILCHIMP_API_SERVER;
-    const AUDIENCE_ID = secrets.MAILCHIMP_AUDIENCE_ID;
+    // const data = {
+    //   email_address: email,
+    //   status: "subscribed",
+    // };
 
-    const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`;
+    // const options = {
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Authorization: `api_key ${API_KEY}`,
+    //   },
+    // };
 
-    const data = {
-      email_address: email,
-      status: "subscribed",
-    };
-
-    const options = {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `api_key ${API_KEY}`,
-      },
-    };
-
-    // openErrorSnackbar("Error subscribing. Please try again.");
-    // openSuccessSnackbar("Succssfully subscribed. Thank you!");
-
+    setErrorSnackbarOpen(true);
+    // setSuccessSnackbarOpen(true);
     closeModal();
   };
 
-  // const mailchimpSubscribe = async () => {
-  //   // TODO: actually subscribe using mailchimp
+  const handleSuccessSnackbarClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
 
-  //   const response = await subscribe(email);
-  //   response
-  //     .then((_) => {
-  //       openSuccessSnackbar(
-  //         "Successfully Subscribed to newsletter. Thank you!"
-  //       );
-  //     })
-  //     .catch((e) => {
-  //       openErrorSnackbar("Error subscribing. Please try again.");
-  //       console.err(e);
-  //     });
+    setSuccessSnackbarOpen(false);
+  };
 
-  //   closeModal();
-  // };
+  const handleErrorSnackbarClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setErrorSnackbarOpen(false);
+  };
 
   const handleChange = (event) => {
     setEmail(event.target.value);
@@ -87,7 +82,6 @@ export default function SubscribeModal({ btnClassName }) {
           Sign me up &#8594;
         </button>
       </div>
-
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
@@ -167,13 +161,28 @@ export default function SubscribeModal({ btnClassName }) {
                       Cancel
                     </button>
                   </div>
-                  <Subscribe></Subscribe>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
           </div>
         </Dialog>
-      </Transition>
+      </Transition>{" "}
+      <Snackbar
+        open={successSnackbarOpen}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        autoHideDuration={4000}
+        onClose={handleSuccessSnackbarClose}
+      >
+        <Alert severity="success">Succssfully subscribed. Thank you!</Alert>
+      </Snackbar>
+      <Snackbar
+        open={errorSnackbarOpen}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        autoHideDuration={4000}
+        onClose={handleErrorSnackbarClose}
+      >
+        <Alert severity="error">Error subscribing. Please try again.</Alert>
+      </Snackbar>
     </>
   );
 }

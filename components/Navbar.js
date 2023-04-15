@@ -1,7 +1,7 @@
-import siteMetadata from "@/data/siteMetadata";
-import headerNavLinks from "@/data/headerNavLinks";
-import Logo from "@/components/Logo";
-import Link from "@/components/Link";
+import siteMetadata from "../data/siteMetadata";
+import headerNavLinks from "../data/headerNavLinks";
+import Logo from "../components/Logo";
+import Link from "../components/Link";
 
 import MobileNav from "./MobileNav";
 import ThemeSwitch from "./ThemeSwitch";
