@@ -17,9 +17,9 @@ member made adequate and equal contributions to the project.
 | Implementing OpenGraph                            | 3            | [Issue 24](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/24) | Done   | Aryan Nesti (aryannesti)     | 04/12/23    | 4/12/23      | user story    | added Meta Tags for twitter and OpenGraph                              |
 | Implementing Google Analytics                     | 5            | [Issue 7](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/7)   | Done   | Aryan Nesti (aryannesti)     | 04/12/23    | 4/12/23      | user story    | added script tags for google analytics                                 |
 | Implement Playwright testing                      | 5            | [Issue 25](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/25) | Done   | Ebram Mekhail (ebrammekhail) | 04/12/23    | 4/13/23      | devops        | fixed the yml file to automatically using playwright to test the code  |
-| Implement ChimpMail                               | 8            | [Issue 4](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/4)   | Done   | Ebram Mekhail (ebrammekhail) | 04/12/23    | 4/13/23      | user story    | users can subscribe to newsletter sent by ChimpMail                    |
+| Implement ChimpMail                               | 8            | [Issue 4](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/4)   | Done   | Aryan Nesti (aryannesti)     | 04/12/23    | 4/13/23      | user story    | users can subscribe to newsletter sent by ChimpMail                    |
 | Implement UI for Mailchimp Subscribe              | 5            | [Issue 30](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/30) | Done   | Stephen Ebrahim (se6-njit)   | 04/14/23    | 4/14/23      | user story    | created modal component and validation for subscribing                 |
-| Implement UI for Mailchimp Subscribe              | 8            | [Issue 31](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/31) | Done   | Ebram Mekhail (ebrammekhail) | 04/14/23    | 4/14/23      | user story    | Using Sanity.io as a headless CMS to manage and post content to Blogs  |
+| Implementing Sanity.io as a Headless CMS          | 8            | [Issue 31](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/31) | Done   | Ebram Mekhail (ebrammekhail) | 04/14/23    | 4/14/23      | user story    | Using Sanity.io as a headless CMS to manage and post content to Blogs  |
 
 
 ## Accumulating Contributions
@@ -27,7 +27,7 @@ member made adequate and equal contributions to the project.
 | Team Member                | Total Story Points |
 | -------------------------- | ------------------ |
 | Stephen Ebrahim (se6-njit) | 28                 |
-| Ebram Mekhail              | 5                  |
+| Ebram Mekhail              | 18                  |
 | Aryan Nesti                | 18                 |
 
 ## Productivity Rating Calculation
@@ -39,5 +39,5 @@ member made adequate and equal contributions to the project.
 | Team Member                | Rating        |
 | -------------------------- | ------------- |
 | Stephen Ebrahim (se6-njit) | 28 / 8 = 3.5  |
-| Ebram Mekhail              | 5 / 1 = 5     |
+| Ebram Mekhail              | 18 / 3 = 6    |
 | Aryan Nesti                | 18 / 4 = 4.5  |
