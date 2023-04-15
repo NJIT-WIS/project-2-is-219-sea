@@ -1,7 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { useSnackbar } from "react-simple-snackbar";
-import subscribe from "../pages/api/subscriber";
+// import subscribe from "../pages/api/subscriber";
+import axios from "axios";
 
 export default function SubscribeModal({ btnClassName }) {
   let [isOpen, setIsOpen] = useState(false);
@@ -14,23 +15,38 @@ export default function SubscribeModal({ btnClassName }) {
     style: { backgroundColor: "#D84A47", color: "white" },
   });
 
-  const mailchimpSubscribe = async () => {
-    // TODO: actually subscribe using mailchimp
+  const subscribe = async (e) => {
+    e.preventDefault()
 
-    const response = await subscribe(email);
-    response
-      .then((_) => {
-        openSuccessSnackbar(
-          "Successfully Subscribed to newsletter. Thank you!"
-        );
-      })
-      .catch((e) => {
-        openErrorSnackbar("Error subscribing. Please try again.");
-        console.err(e);
-      });
+    try {
+      const response = await axios.post('/api/subscribe', { email })
+      openSuccessSnackbar(
+        "Successfully Subscribed to newsletter. Thank you!"
+      );
+      console.log(email)
+    } catch (e) {
+      openErrorSnackbar("Error subscribing. Please try again.");
+      console.log(e);
+    }
+  }
+  
+  // const mailchimpSubscribe = async () => {
+  //   // TODO: actually subscribe using mailchimp
 
-    closeModal();
-  };
+  //   const response = await subscribe(email);
+  //   response
+  //     .then((_) => {
+  //       openSuccessSnackbar(
+  //         "Successfully Subscribed to newsletter. Thank you!"
+  //       );
+  //     })
+  //     .catch((e) => {
+  //       openErrorSnackbar("Error subscribing. Please try again.");
+  //       console.err(e);
+  //     });
+
+  //   closeModal();
+  // };
 
   const handleChange = (event) => {
     setEmail(event.target.value);

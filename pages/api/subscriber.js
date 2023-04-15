@@ -19,20 +19,20 @@ const subscribe = async (email) => {
     },
   };
 
-  return axios.post(url, JSON.stringify(data), options);
+  // return axios.post(url, JSON.stringify(data), options);
 
-  // try {
-  //   const response = await axios.post(url, data, options);
-  //   if (response.status >= 400) {
-  //     return {
-  //       error: `There was an error subscribing to the newsletter. Shoot me an email at ogbonnakell@gmail and I'll add you to the list.`,
-  //     };
-  //   }
-  //   return { message: "success" };
-  // } catch (error) {
-  //   console.log(error);
-  //   return { error: error.message };
-  // }
+  try {
+    const response = await axios.post(url, data, options);
+    if (response.status >= 400) {
+      return {
+        error: `There was an error subscribing to the newsletter. Shoot me an email at ogbonnakell@gmail and I'll add you to the list.`,
+      };
+    }
+    return { message: "success" };
+  } catch (error) {
+    console.log(error);
+    return { error: error.message };
+  }
 };
 
 export default subscribe;
