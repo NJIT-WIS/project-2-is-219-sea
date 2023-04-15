@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "@/components/layout";
-import utilStyles from "@/styles/utils.module.css";
-import { getSortedPostsData } from "@/lib/posts";
+import Layout, { siteTitle } from "../components/layout";
+import utilStyles from "../styles/utils.module.css";
+import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
-import Date from "@/components/date";
-import Subscribe from "@/components/Subscribe";
+import Date from "../components/date";
+import Subscribe from "../components/Subscribe";
 import { NextSeo } from "next-seo";
 
 export default function Home({ allPostsData }) {

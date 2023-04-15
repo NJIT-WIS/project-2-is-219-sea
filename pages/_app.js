@@ -1,6 +1,6 @@
 import "../styles/global.css";
 import "../styles/tailwind.css";
-import "@/styles/prism.css";
+import "../styles/prism.css";
 
 // next components
 import Head from "next/head";
@@ -9,13 +9,13 @@ import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 
 // components
-import PageWrapper from "@/components/PageWrapper";
+import PageWrapper from "../components/PageWrapper";
 
 // Scripts
 import Script from 'next/script'
 
 // others
-import siteMetadata from "@/data/siteMetadata";
+import siteMetadata from "../data/siteMetadata";
 
 export default function App({ Component, pageProps }) {
   return (

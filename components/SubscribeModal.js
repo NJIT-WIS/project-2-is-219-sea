@@ -1,10 +1,15 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
+<<<<<<< Updated upstream
 
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 
 // import subscribe from "../pages/api/subscriber";
+=======
+import { useSnackbar } from "react-simple-snackbar";
+import subscribe from "../pages/api/subscriber";
+>>>>>>> Stashed changes
 import axios from "axios";
 import Subscribe from "./Subscribe";
 
@@ -14,10 +19,18 @@ export default function SubscribeModal({ btnClassName }) {
   let [successSnackbarOpen, setSuccessSnackbarOpen] = useState(false);
   let [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
 
-  const subscribe = async (e) => {
-    const API_KEY = secrets.MAILCHIMP_API_KEY;
-    const API_SERVER = secrets.MAILCHIMP_API_SERVER;
-    const AUDIENCE_ID = secrets.MAILCHIMP_AUDIENCE_ID;
+  const subscribe = async (email) => {
+    const response = await subscribe(email);
+    // response
+    //   .then((_) => {
+    //     openSuccessSnackbar(
+    //       "Successfully Subscribed to newsletter. Thank you!"
+    //     );
+    //   })
+    //   .catch((e) => {
+    //     openErrorSnackbar("Error subscribing. Please try again.");
+    //     console.err(e);
+    //   });
 
     const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`;
 
