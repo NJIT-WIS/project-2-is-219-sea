@@ -11,17 +11,23 @@ const query = groq`
 }
 `;
 
-
-
-const Post = (props) => {
+function Post ({post}) {
+  const {
+    title = 'Missing title',
+    name = 'Missing name',
+    categories,
+    authorImage,
+    body = []
+  } = post
   return (
+    // <div>hello</div>
     <div>
       <h1>
-        Title: {props.title}
+        Title: {post.title}
       </h1>
       <div>
         categories:
-        {props.categories.map(category => (
+        {post.categories.map(category => (
                 <p>{category.title}</p>
         ))}
       </div>
@@ -29,12 +35,12 @@ const Post = (props) => {
       <div>
         Images:
           <img
-            src={urlFor(props.mainImage).url()}
-            alt={props.author.name}
+            src={urlFor(post.mainImage).url()}
+            alt={post.author.name}
           />
       </div>
       <div>
-        {props.body.map(block => (
+        {post.body.map(block => (
             <p className='text-right'>{block.children[0].text}</p>
           ))}
       </div>
@@ -42,10 +48,26 @@ const Post = (props) => {
   )
 }
 
-Post.getInitialProps = async function (context) {
+export async function getStaticPaths() {
+  const paths = await client.fetch(
+    groq`*[_type == "post" && defined(slug.current)][].slug.current`
+  )
+
+  return {
+    paths: paths.map((slug) => ({params: {slug}})),
+    fallback: false,
+  }
+}
+
+export async function getStaticProps(context) {
   // It's important to default the slug so that it doesn't return "undefined"
-  const { slug = "" } = context.query
-  return await client.fetch(query, { slug })
+  const { slug = "" } = context.params
+  const post = await client.fetch(query, { slug })
+  return {
+    props: {
+      post
+    }
+  }
 }
 
 export default Post
