@@ -49,7 +49,6 @@ export default function Home({ allPostsData }) {
             ))}
           </ul>
         </section>
-        {/* <Subscribe></Subscribe> */}
       </Layout>
     </>
   );

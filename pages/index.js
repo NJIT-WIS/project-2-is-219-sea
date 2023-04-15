@@ -12,7 +12,6 @@ import Date from "../components/date";
 import styles from "../components/layout.module.css";
 import { NextSeo } from "next-seo";
 import SubscribeModal from "../components/SubscribeModal";
-import SnackbarProvider from "react-simple-snackbar";
 
 export default function Home({ allPostsData }) {
   return (

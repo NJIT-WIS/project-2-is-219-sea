@@ -1,15 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 
-
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
-
-// import subscribe from "../pages/api/subscriber";
-import { useSnackbar } from "react-simple-snackbar";
-import subscribe from "../pages/api/subscriber";
-import axios from "axios";
-import Subscribe from "./Subscribe";
 
 export default function SubscribeModal({ btnClassName }) {
   let [isOpen, setIsOpen] = useState(false);
@@ -17,6 +10,7 @@ export default function SubscribeModal({ btnClassName }) {
   let [successSnackbarOpen, setSuccessSnackbarOpen] = useState(false);
   let [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
 
+  // TODO: Aryan, here you would implement mailchimp subscribe
   const subscribe = async (email) => {
     const response = await subscribe(email);
     // response
@@ -30,19 +24,19 @@ export default function SubscribeModal({ btnClassName }) {
     //     console.err(e);
     //   });
 
-    const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`;
+    // const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`;
 
-    const data = {
-      email_address: email,
-      status: "subscribed",
-    };
+    // const data = {
+    //   email_address: email,
+    //   status: "subscribed",
+    // };
 
-    const options = {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `api_key ${API_KEY}`,
-      },
-    };
+    // const options = {
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Authorization: `api_key ${API_KEY}`,
+    //   },
+    // };
 
     setErrorSnackbarOpen(true);
     // setSuccessSnackbarOpen(true);
@@ -167,7 +161,6 @@ export default function SubscribeModal({ btnClassName }) {
                       Cancel
                     </button>
                   </div>
-                  <Subscribe></Subscribe>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
