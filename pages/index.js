@@ -12,7 +12,6 @@ import Date from "../components/date";
 import styles from "../components/layout.module.css";
 import { NextSeo } from "next-seo";
 import SubscribeModal from "@/components/SubscribeModal";
-import SnackbarProvider from "react-simple-snackbar";
 
 export default function Home({ allPostsData }) {
   return (
@@ -78,9 +77,7 @@ export default function Home({ allPostsData }) {
               Interested and would like to learn more? Stay up to date and
               subscribe to our newsletter!
             </p>
-            <SnackbarProvider>
-              <SubscribeModal btnClassName="flex justify-end mt-8" />
-            </SnackbarProvider>
+            <SubscribeModal btnClassName="flex justify-end mt-8" />
           </div>
         </main>
       </div>
