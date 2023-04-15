@@ -3,6 +3,7 @@ import { Fragment, useState } from "react";
 
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
+import { useRef } from 'react';
 
 export default function SubscribeModal({ btnClassName }) {
   let [isOpen, setIsOpen] = useState(false);
@@ -11,8 +12,26 @@ export default function SubscribeModal({ btnClassName }) {
   let [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
 
   // TODO: Aryan, here you would implement mailchimp subscribe
-  const subscribe = async (email) => {
-    const response = await subscribe(email);
+  const inputRef = useRef(null);
+  const subscribeUser = async (e) => {
+    e.preventDefault();
+
+    // this is where your mailchimp request is made
+
+    const res = await fetch('/api/subscribeUser', {
+      body: JSON.stringify({
+        email: inputRef.current.value,
+      }),
+
+      headers: {
+        'Content-Type': 'application/json',
+      },
+
+      method: 'POST',
+    });
+  };
+  // const subscribe = async (email) => {
+  //   const response = await subscribe(email);
     // response
     //   .then((_) => {
     //     openSuccessSnackbar(
@@ -38,10 +57,10 @@ export default function SubscribeModal({ btnClassName }) {
     //   },
     // };
 
-    setErrorSnackbarOpen(true);
-    // setSuccessSnackbarOpen(true);
-    closeModal();
-  };
+  //   setErrorSnackbarOpen(true);
+  //   // setSuccessSnackbarOpen(true);
+  //   closeModal();
+  // };
 
   const handleSuccessSnackbarClose = (event, reason) => {
     if (reason === "clickaway") {
@@ -114,7 +133,7 @@ export default function SubscribeModal({ btnClassName }) {
                   >
                     Subscribe to our Newsletter!
                   </Dialog.Title>
-                  <div className="mt-2">
+                  <div className="mt-2" onSubmit={subscribeUser}>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
                       Join our community of innovative educators and discover
                       how to engage and inspire your students like never before.
@@ -133,10 +152,11 @@ export default function SubscribeModal({ btnClassName }) {
                       value={email}
                       onChange={handleChange}
                       type="email"
-                      id="email"
+                      id="email-input"
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="john.doe@gmail.com"
                       required
+                      ref={inputRef}
                     />
                   </div>
                   <div className="mt-4 flex flex-row justify-center">
@@ -149,7 +169,7 @@ export default function SubscribeModal({ btnClassName }) {
                           ? " bg-gray-200 dark: dark:bg-gray-700 text-gray-900 dark:text-white focus-visible:ring-gray-800"
                           : " bg-green-100 text-green-900 hover:bg-green-300 focus-visible:ring-green-500")
                       }
-                      onClick={subscribe}
+                      onClick={subscribeUser}
                     >
                       Subscribe
                     </button>
