@@ -1,15 +1,13 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-<<<<<<< Updated upstream
+
 
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 
 // import subscribe from "../pages/api/subscriber";
-=======
 import { useSnackbar } from "react-simple-snackbar";
 import subscribe from "../pages/api/subscriber";
->>>>>>> Stashed changes
 import axios from "axios";
 import Subscribe from "./Subscribe";
 
