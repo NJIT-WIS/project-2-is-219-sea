@@ -6,6 +6,8 @@ import Link from "../components/Link";
 import MobileNav from "./MobileNav";
 import ThemeSwitch from "./ThemeSwitch";
 
+import SchoolIcon from "@mui/icons-material/School";
+
 const Navbar = () => {
   return (
     <header className="flex items-center justify-between py-10">
@@ -17,11 +19,13 @@ const Navbar = () => {
         >
           <div className="flex items-center justify-between">
             <div className="mr-3">
-              {/* TODO: create a proper logo, it is a placeholder currently*/}
-              <Logo />
+              <SchoolIcon />
             </div>
             {typeof siteMetadata.headerTitle === "string" ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block">
+              <div
+                style={{ marginBottom: "8px" }}
+                className="hidden h-6 text-2xl font-semibold sm:block"
+              >
                 {siteMetadata.headerTitle}
               </div>
             ) : (
