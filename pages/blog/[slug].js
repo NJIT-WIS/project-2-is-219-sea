@@ -38,6 +38,9 @@ export async function generateSaticParams() {
 
 function Post({ post, home }) {
   const router = useRouter();
+  if (router.isFallback) {
+    return <h1>Data is loading</h1>;
+  }
 
   return (
     <div>
@@ -122,7 +125,7 @@ export async function getStaticPaths() {
 
   return {
     paths: paths.map((slug) => ({ params: { slug } })),
-    fallback: "blocking",
+    fallback: true,
   };
 }
 

@@ -2,6 +2,8 @@ import { BlogList, query } from "../../../components/BlogList";
 import { client } from "../../../lib/sanity.client";
 import { POSTS_PER_PAGE } from "../index";
 
+import { useRouter } from "next/router";
+
 export async function getStaticPaths({ preview = false }) {
   if (preview) {
     return { props: { preview } };
@@ -15,7 +17,7 @@ export async function getStaticPaths({ preview = false }) {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
@@ -40,10 +42,16 @@ export async function getStaticProps(context) {
       initialDisplayPosts,
       pagination,
     },
+    revalidate: 1,
   };
 }
 
 export default function BlogPage({ data, initialDisplayPosts, pagination }) {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <h1>Data is loading</h1>;
+  }
+
   return (
     <>
       <BlogList

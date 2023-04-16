@@ -3,7 +3,7 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
-import Script from 'next/script'
+import Script from "next/script";
 
 import { NextSeo } from "next-seo";
 
@@ -55,5 +55,6 @@ export async function getStaticProps({ params }) {
     props: {
       postData,
     },
+    revalidate: 1,
   };
 }
