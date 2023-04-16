@@ -2,7 +2,8 @@ const siteMetadata = {
   title: "Next.js MyWebClass",
   authors: ["Stephen Ebrahim", "Ebram Mekhail", "Aryan Nesti"],
   headerTitle: "Neural Nexus",
-  description: "temp description...",
+  description:
+    "Read the latest blogs to stay up to date with cutting edge technology that can transform education as a whole!",
   language: "en-us",
   theme: "system",
   email: "address@yoursite.com",
