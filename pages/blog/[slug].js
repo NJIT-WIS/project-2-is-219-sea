@@ -83,7 +83,7 @@ function Post({ post, home }) {
         {post.mainImage && (
           <img
             src={urlFor(post.mainImage).url()}
-            style={{ width: "70%" }}
+            style={{ width: "70%", maxHeight: "350px" }}
             className="m-8"
             alt={"unDraw.co: " + post.title}
           />

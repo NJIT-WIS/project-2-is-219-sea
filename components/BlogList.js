@@ -74,21 +74,21 @@ export function BlogList({
             </svg>
           </div>
         </div>
-        {/* <button
-          onClick={() => {
-            console.log(data);
-            console.log(pagination);
-          }}
-        >
-          test
-        </button> */}
         <ul className="pt-4">
           {!filteredBlogPosts.length && "No posts found."}
           {displayPosts.map((post) => {
             const date = post._createdAt;
             const slug = post.slug.current;
             const blogTitle = post.title;
-            const summary = post.body[0].children[0].text;
+            let summary = "";
+
+            post.body.map((blocks) => {
+              blocks.children.map((child) => {
+                summary += child.text + " ";
+              });
+            });
+            summary = summary.substring(0, 150) + "...";
+
             const categories = post.categories;
             const author = post.author.name;
 
@@ -126,7 +126,7 @@ export function BlogList({
                       </div>
                     </div>
                     <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                      {summary.substring(0, 200) + "..."}
+                      {summary}
                     </div>
                   </div>
                 </article>

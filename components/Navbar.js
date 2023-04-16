@@ -19,7 +19,7 @@ const Navbar = () => {
         >
           <div className="flex items-center justify-between">
             <div className="">
-              <SchoolIcon />
+              <SchoolIcon className="mr-3" />
             </div>
             {typeof siteMetadata.headerTitle === "string" ? (
               <div
