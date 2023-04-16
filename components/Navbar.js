@@ -18,7 +18,7 @@ const Navbar = () => {
           aria-label={siteMetadata.headerTitle}
         >
           <div className="flex items-center justify-between">
-            <div className="mr-3">
+            <div className="">
               <SchoolIcon />
             </div>
             {typeof siteMetadata.headerTitle === "string" ? (

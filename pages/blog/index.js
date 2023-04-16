@@ -14,20 +14,17 @@ export const getStaticProps = async ({ preview = false }) => {
     currentPage: 1,
     totalPages: Math.ceil(data.length / POSTS_PER_PAGE),
   };
-  return { 
-    props: { 
-      data, 
-      initialDisplayPosts, 
-      pagination 
-    }, 
-    revalidate: 1 };
+  return {
+    props: {
+      data,
+      initialDisplayPosts,
+      pagination,
+    },
+    revalidate: 1,
+  };
 };
 
-export default function IndexPage({
-  data,
-  initialDisplayPosts,
-  pagination,
-}) {
+export default function IndexPage({ data, initialDisplayPosts, pagination }) {
   return (
     <>
       <BlogList

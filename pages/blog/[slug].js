@@ -7,9 +7,13 @@ import styles from "../../components/layout.module.css";
 import { NextSeo } from "next-seo";
 import Script from "next/script";
 import Link from "next/link";
-import Image from "next/image";
 import utilStyles from "../../styles/utils.module.css";
 import formatDate from "../../lib/utils/formatDate";
+
+import { PortableText } from "@portabletext/react";
+import CustomPortableTextComponents from "../../components/CustomPortableTextComponents";
+
+import { useRouter } from "next/router";
 
 const query = groq`
 *[_type =='post' && slug.current == $slug][0]{
@@ -27,13 +31,14 @@ export async function generateSaticParams() {
   `;
   const slugs = await client.fetch(query);
   const slugRoutes = slugs.map((slug) => slug.slug.current);
-  return slugRoutes.map(slug => ({
+  return slugRoutes.map((slug) => ({
     slug,
   }));
-
 }
 
 function Post({ post, home }) {
+  const router = useRouter();
+
   return (
     <div>
       <Head>
@@ -62,10 +67,10 @@ function Post({ post, home }) {
         <p className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
           {formatDate(post._createdAt)}
         </p>
-        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 mb-2">
+        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 mb-1">
           {post.title}
         </h1>
-        <div className="flex flex-wrap mb-4">
+        <div className="flex flex-wrap">
           {post.categories.map((category) => (
             <p
               key={category._id}
@@ -75,15 +80,15 @@ function Post({ post, home }) {
             </p>
           ))}
         </div>
-        <Image
-          priority
-          src="/../public/images/profile.jpg"
-          className={utilStyles.borderCircle}
-          height={108}
-          width={108}
-          alt={post.title}
-        />
-        <p className="text-base mt-5 font-medium leading-6 text-gray-500 dark:text-gray-400">
+        {post.mainImage && (
+          <img
+            src={urlFor(post.mainImage).url()}
+            style={{ width: "70%" }}
+            className="m-8"
+            alt={"unDraw.co: " + post.title}
+          />
+        )}
+        <p className="text-basefont-medium leading-6 text-gray-500 dark:text-gray-400">
           {"By " + post.author.name}
         </p>
       </header>
@@ -91,25 +96,21 @@ function Post({ post, home }) {
         <Head>
           <NextSeo />
         </Head>
-        <section className={utilStyles.headingMd}>
-          {post.body.map((block) => {
-            let totalBlock = "";
-            block.children.map((b) => {
-              totalBlock += b.text + " ";
-            });
-            return (
-              <p className="mb-10" key={block._id}>
-                {totalBlock}
-              </p>
-            );
-          })}
+        <section className="mb-10">
+          <PortableText
+            value={post.body}
+            components={CustomPortableTextComponents}
+          ></PortableText>
         </section>
       </main>
-      {/* {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
-        </div>
-      )} */}
+      <div>
+        <button
+          className="rounded-md border border-transparent bg-purple-200 px-4 py-2 text-sm font-medium text-purple-900 hover:bg-purple-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2"
+          onClick={() => router.back()}
+        >
+          ← Back to blogs
+        </button>
+      </div>
     </div>
   );
 }
@@ -121,7 +122,7 @@ export async function getStaticPaths() {
 
   return {
     paths: paths.map((slug) => ({ params: { slug } })),
-    fallback: 'blocking',
+    fallback: "blocking",
   };
 }
 
