@@ -19,6 +19,20 @@ const query = groq`
 }
 `;
 
+export async function generateSaticParams() {
+  const query = groq`
+  *[_type == 'post']{
+    slug
+  }
+  `;
+  const slugs = await client.fetch(query);
+  const slugRoutes = slugs.map((slug) => slug.slug.current);
+  return slugRoutes.map(slug => ({
+    slug,
+  }));
+
+}
+
 function Post({ post, home }) {
   return (
     <div>
