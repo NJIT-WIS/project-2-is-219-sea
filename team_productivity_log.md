@@ -22,13 +22,15 @@ member made adequate and equal contributions to the project.
 | Implementing Sanity.io as a Headless CMS          | 8            | [Issue 31](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/31) | Done   | Ebram Mekhail (ebrammekhail) | 04/14/23    | 4/14/23      | user story       | Using Sanity.io as a headless CMS to manage and post content to Blogs  |
 | Fixing dependency issue                           | 5            | [Issue 36](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/36) | Done   | Stephen Ebrahim (se6-njit)   | 04/15/23    | 4/15/23      | bug fix          | Fixed dependency issue by using a different package for snackbar ui    |
 | Refactoring main branch due to conflicts          | 5            | [Issue 39](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/39) | Done   | Stephen Ebrahim (se6-njit)   | 04/15/23    | 4/15/23      | bug fix & devops | Refactored some code in order to fix dependency issues and conflict    |
+| Implement Blog-Search Functionality               | 3            | [Issue 5](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/5)   | Done   | Stephen Ebrahim (se6-njit)   | 04/10/23    | 4/15/23      | user story       | Completed search functionality use blog content, title, author, etc.   |
+| Create blog component of website                  | 8            | [Issue 6](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/6)   | Done   | Stephen Ebrahim (se6-njit)   | 04/10/23    | 4/15/23      | user story       | Completed entire blog component of website                             |
 
 
 ## Accumulating Contributions
 
 | Team Member                | Total Story Points |
 | -------------------------- | ------------------ |
-| Stephen Ebrahim (se6-njit) | 38                 |
+| Stephen Ebrahim (se6-njit) | 49                 |
 | Ebram Mekhail              | 18                 |
 | Aryan Nesti                | 18                 |
 
@@ -38,8 +40,8 @@ member made adequate and equal contributions to the project.
   points that each they completed and then divide that by the number of issues
   to come up with a productivity rating.
 
-| Team Member                | Rating        |
-| -------------------------- | ------------- |
-| Stephen Ebrahim (se6-njit) | 38 / 10 = 3.8 |
-| Ebram Mekhail              | 18 / 3 = 6    |
-| Aryan Nesti                | 18 / 4 = 4.5  |
+| Team Member                | Rating         |
+| -------------------------- | -------------- |
+| Stephen Ebrahim (se6-njit) | 49 / 12 = 4.08 |
+| Ebram Mekhail              | 18 / 3 = 6     |
+| Aryan Nesti                | 18 / 4 = 4.5   |
