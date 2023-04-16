@@ -1,7 +1,15 @@
-
-import groq from 'groq'
-import { client } from '../../lib/sanity.client'
-import urlFor from '../../lib/urlFor';
+import groq from "groq";
+import { client } from "../../lib/sanity.client";
+import urlFor from "../../lib/urlFor";
+import Head from "next/head";
+import Layout, { siteTitle } from "../../components/layout";
+import styles from "../../components/layout.module.css";
+import { NextSeo } from "next-seo";
+import Script from "next/script";
+import Link from "next/link";
+import Image from "next/image";
+import utilStyles from "../../styles/utils.module.css";
+import formatDate from "../../lib/utils/formatDate";
 
 const query = groq`
 *[_type =='post' && slug.current == $slug][0]{
@@ -11,63 +19,107 @@ const query = groq`
 }
 `;
 
-function Post ({post}) {
-  const {
-    title = 'Missing title',
-    name = 'Missing name',
-    categories,
-    authorImage,
-    body = []
-  } = post
+function Post({ post, home }) {
   return (
-    // <div>hello</div>
     <div>
-      <h1>
-        Title: {post.title}
-      </h1>
-      <div>
-        categories:
-        {post.categories.map(category => (
-                <p>{category.title}</p>
-        ))}
-      </div>
-        {/* Same thing for images */}
-      <div>
-        Images:
-          <img
-            src={urlFor(post.mainImage).url()}
-            alt={post.author.name}
-          />
-      </div>
-      <div>
-        {post.body.map(block => (
-            <p className='text-right'>{block.children[0].text}</p>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Learn how to build a personal website using Next.js"
+        />
+        <meta
+          property="og:image"
+          content={`https://og-image.vercel.app/${encodeURI(
+            siteTitle
+          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+        />
+        <meta name="og:title" content={siteTitle} />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <Script
+        src="https://connect.facebook.net/en_US/sdk.js"
+        strategy="lazyOnload"
+        onLoad={() =>
+          console.log(`script loaded correctly, window.FB has been populated`)
+        }
+      />
+      <header className={styles.header + " mb-10"}>
+        <p className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+          {formatDate(post._createdAt)}
+        </p>
+        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 mb-2">
+          {post.title}
+        </h1>
+        <div className="flex flex-wrap mb-4">
+          {post.categories.map((category) => (
+            <p
+              key={category._id}
+              className="mr-3 text-sm font-medium uppercase text-primary-500"
+            >
+              {category.title}
+            </p>
           ))}
-      </div>
+        </div>
+        <Image
+          priority
+          src="/../public/images/profile.jpg"
+          className={utilStyles.borderCircle}
+          height={108}
+          width={108}
+          alt={post.title}
+        />
+        <p className="text-base mt-5 font-medium leading-6 text-gray-500 dark:text-gray-400">
+          {"By " + post.author.name}
+        </p>
+      </header>
+      <main>
+        <Head>
+          <NextSeo />
+        </Head>
+        <section className={utilStyles.headingMd}>
+          {post.body.map((block) => {
+            let totalBlock = "";
+            block.children.map((b) => {
+              totalBlock += b.text + " ";
+            });
+            return (
+              <p className="mb-10" key={block._id}>
+                {totalBlock}
+              </p>
+            );
+          })}
+        </section>
+      </main>
+      {/* {!home && (
+        <div className={styles.backToHome}>
+          <Link href="/">← Back to home</Link>
+        </div>
+      )} */}
     </div>
-  )
+  );
 }
 
 export async function getStaticPaths() {
   const paths = await client.fetch(
     groq`*[_type == "post" && defined(slug.current)][].slug.current`
-  )
+  );
 
   return {
-    paths: paths.map((slug) => ({params: {slug}})),
+    paths: paths.map((slug) => ({ params: { slug } })),
     fallback: false,
-  }
+  };
 }
 
 export async function getStaticProps(context) {
   // It's important to default the slug so that it doesn't return "undefined"
-  const { slug = "" } = context.params
-  const post = await client.fetch(query, { slug })
+  const { slug = "" } = context.params;
+  const post = await client.fetch(query, { slug });
   return {
     props: {
-      post
-    }
-  }
+      post,
+    },
+  };
 }
 
-export default Post
+export default Post;
