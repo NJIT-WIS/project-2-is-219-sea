@@ -13,6 +13,7 @@ export default async (req, res) => {
     const AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID;
     const API_KEY = process.env.MAILCHIMP_API_KEY;
     const DATACENTER = process.env.MAILCHIMP_API_SERVER;
+    console.log(API_KEY);
     const data = {
       email_address: email,
       status: 'subscribed',
