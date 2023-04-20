@@ -18,7 +18,7 @@ export default function SubscribeModal({ btnClassName }) {
 
     // this is where your mailchimp request is made
 
-    const res = await fetch('/api/subscribeUser', {
+    const res = await fetch('project-2-is-219-sea/api/subscribeUser', {
       body: JSON.stringify({
         email: inputRef.current.value,
       }),
