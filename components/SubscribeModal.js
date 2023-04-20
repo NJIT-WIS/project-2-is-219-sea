@@ -3,7 +3,7 @@ import { Fragment, useState } from "react";
 
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
-import { useRef } from 'react';
+import { useRef } from "react";
 
 export default function SubscribeModal({ btnClassName }) {
   let [isOpen, setIsOpen] = useState(false);
@@ -18,44 +18,44 @@ export default function SubscribeModal({ btnClassName }) {
 
     // this is where your mailchimp request is made
 
-    const res = await fetch('project-2-is-219-sea/api/subscribeUser', {
+    const res = await fetch("api/subscribeUser", {
       body: JSON.stringify({
         email: inputRef.current.value,
       }),
 
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
 
-      method: 'POST',
+      method: "POST",
     });
   };
   // const subscribe = async (email) => {
   //   const response = await subscribe(email);
-    // response
-    //   .then((_) => {
-    //     openSuccessSnackbar(
-    //       "Successfully Subscribed to newsletter. Thank you!"
-    //     );
-    //   })
-    //   .catch((e) => {
-    //     openErrorSnackbar("Error subscribing. Please try again.");
-    //     console.err(e);
-    //   });
+  // response
+  //   .then((_) => {
+  //     openSuccessSnackbar(
+  //       "Successfully Subscribed to newsletter. Thank you!"
+  //     );
+  //   })
+  //   .catch((e) => {
+  //     openErrorSnackbar("Error subscribing. Please try again.");
+  //     console.err(e);
+  //   });
 
-    // const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`;
+  // const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`;
 
-    // const data = {
-    //   email_address: email,
-    //   status: "subscribed",
-    // };
+  // const data = {
+  //   email_address: email,
+  //   status: "subscribed",
+  // };
 
-    // const options = {
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Authorization: `api_key ${API_KEY}`,
-    //   },
-    // };
+  // const options = {
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //     Authorization: `api_key ${API_KEY}`,
+  //   },
+  // };
 
   //   setErrorSnackbarOpen(true);
   //   // setSuccessSnackbarOpen(true);
