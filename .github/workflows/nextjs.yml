@@ -98,9 +98,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
-      MAILCHIMP_API_SERVER: ${{ secrets.MAILCHIMP_API_SERVER }}
-      MAILCHIMP_AUDIENCE_ID: ${{ secrets.MAILCHIMP_AUDIENCE_ID }}
     runs-on: ubuntu-latest
     needs: build
     steps:
