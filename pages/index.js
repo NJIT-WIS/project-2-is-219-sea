@@ -14,6 +14,7 @@ import { NextSeo } from "next-seo";
 import SubscribeModal from "../components/SubscribeModal";
 
 export default function Home({ allPostsData }) {
+  console.log(process.env.MAILCHIMP_API_KEY);
   return (
     <>
       <NextSeo
