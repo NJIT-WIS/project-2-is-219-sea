@@ -18,22 +18,54 @@ export default function Home({ allPostsData }) {
   return (
     <>
       <NextSeo
-        title="Neural Nexus"
+        title="MyWebClass"
         description="This is a demo description"
-        canonical="https://www.NeuralNexus.com"
+        canonical="https://www.MyWebClass.com"
         openGraph={{
-          url: "https://www.NeuralNexus.com",
-          title: "Neural Nexus",
+          url: "https://www.MyWebClass.com",
+          title: "MyWebClass",
           description:
-            "Welcome to Neural Nexus, the blog webpage that explores the exciting and ever-evolving world of artificial intelligence. From neural networks and deep learning to machine learning and natural language processing, we delve into the latest advancements and applications of AI across various industries and fields.s",
+            "Welcome to MyWebClass, the blog webpage that explores the exciting and ever-evolving world of artificial intelligence. From neural networks and deep learning to machine learning and natural language processing, we delve into the latest advancements and applications of AI across various industries and fields.s",
         }}
         twitter={{
-          handle: "@NeuralNexus",
-          site: "@NeuralNexus.com",
+          handle: "@MyWebClass",
+          site: "@MyWebClass.com",
           cardType: "summary_large_image",
         }}
       />
+
       <div className={styles.container}>
+        <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row  dark:border-gray-700 dark:bg-gray-800">
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <header className={styles.header}>
+              <h1 className={utilStyles.headingXl}>
+                Engage, Innovate, and Transform with AI-Powered Engineering
+                Tools
+              </h1>
+            </header>
+
+            <main>
+              <p className="text-gray-600 dark:text-gray-400">
+                Welcome to MyWebClass.org, your go-to resource for exploring the
+                possibilities of AI and advanced engineering tools in the
+                classroom. Our mission is to empower educators to unleash their
+                creativity and enhance the learning experience for students of
+                all backgrounds. Join our community and discover how you can
+                harness the power of AI to revolutionize the way you teach and
+                engage with your students. Let's transform education together!
+              </p>
+              <div className="my-4">
+                <p className="text-gray-600 dark:text-gray-400">
+                  Interested and would like to learn more? Stay up to date and
+                  subscribe to our newsletter!
+                </p>
+                <SubscribeModal btnClassName="flex justify-end mt-8" />
+              </div>
+            </main>
+          </div>
+
+          <UndrawTeaching className="svg object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" />
+        </div>
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta
@@ -56,14 +88,14 @@ export default function Home({ allPostsData }) {
             console.log(`script loaded correctly, window.FB has been populated`)
           }
         />
-        <header className={styles.header}>
+        {/* <header className={styles.header}>
           <h1 className={utilStyles.headingXl}>
             Engage, Innovate, and Transform with AI-Powered Engineering Tools
           </h1>
 
           <UndrawTeaching className="svg my-10" />
-        </header>
-        <main>
+        </header> */}
+        {/* <main>
           <p>
             Welcome to MyWebClass.org, your go-to resource for exploring the
             possibilities of AI and advanced engineering tools in the classroom.
@@ -80,7 +112,7 @@ export default function Home({ allPostsData }) {
             </p>
             <SubscribeModal btnClassName="flex justify-end mt-8" />
           </div>
-        </main>
+        </main> */}
       </div>
     </>
   );

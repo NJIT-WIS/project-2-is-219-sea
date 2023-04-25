@@ -87,7 +87,7 @@ export function BlogList({
                 summary += child.text + " ";
               });
             });
-            summary = summary.substring(0, 150) + "...";
+            summary = summary.substring(0, 400) + "...";
 
             const categories = post.categories;
             const author = post.author.name;

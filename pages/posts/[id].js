@@ -13,15 +13,15 @@ export default function Post({ postData }) {
       <NextSeo
         title={postData.title}
         description="This is a demo description"
-        canonical="https://www.NeuralNexus.com"
+        canonical="https://www.MyWebClass.com"
         openGraph={{
-          url: "https://www.NeuralNexus.com",
+          url: "https://www.MyWebClass.com",
           title: postData.title,
-          description: "Neural Nexus",
+          description: "MyWebClass",
         }}
         twitter={{
-          handle: "@NeuralNexus",
-          site: "@NeuralNexus.com",
+          handle: "@MyWebClass",
+          site: "@MyWebClass.com",
           cardType: "summary_large_image",
         }}
       />

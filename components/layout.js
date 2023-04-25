@@ -6,7 +6,7 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
-const name = "Neural Nexus";
+const name = "MyWebClass";
 export const siteTitle = "MyWebClass.org";
 
 export default function Layout({ children, home }) {
