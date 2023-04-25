@@ -6,7 +6,7 @@ const PageWrapper = ({ children }) => {
     <div className="mx-auto px-8">
       <div className="flex h-screen flex-col justify-between">
         <Navbar />
-        <main className="mb-auto mx-16">{children}</main>
+        <main className="mb-auto mx-auto">{children}</main>
         <Footer />
       </div>
     </div>

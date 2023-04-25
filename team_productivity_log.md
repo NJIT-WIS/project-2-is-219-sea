@@ -24,13 +24,14 @@ member made adequate and equal contributions to the project.
 | Refactoring main branch due to conflicts          | 5            | [Issue 39](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/39) | Done   | Stephen Ebrahim (se6-njit)   | 04/15/23    | 4/15/23      | bug fix & devops | Refactored some code in order to fix dependency issues and conflict    |
 | Implement Blog-Search Functionality               | 3            | [Issue 5](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/5)   | Done   | Stephen Ebrahim (se6-njit)   | 04/10/23    | 4/15/23      | user story       | Completed search functionality use blog content, title, author, etc.   |
 | Create blog component of website                  | 8            | [Issue 6](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/6)   | Done   | Stephen Ebrahim (se6-njit)   | 04/10/23    | 4/15/23      | user story       | Completed entire blog component of website                             |
+| Create Hero section in home page                  | 5            | [Issue 48](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/48) | Done   | Stephen Ebrahim (se6-njit)   | 04/19/23    | 4/25/23      | user story       | Fixed home page of website and added Hero section                      |
 
 
 ## Accumulating Contributions
 
 | Team Member                | Total Story Points |
 | -------------------------- | ------------------ |
-| Stephen Ebrahim (se6-njit) | 49                 |
+| Stephen Ebrahim (se6-njit) | 54                 |
 | Ebram Mekhail              | 18                 |
 | Aryan Nesti                | 18                 |
 
@@ -42,6 +43,6 @@ member made adequate and equal contributions to the project.
 
 | Team Member                | Rating         |
 | -------------------------- | -------------- |
-| Stephen Ebrahim (se6-njit) | 49 / 12 = 4.08 |
+| Stephen Ebrahim (se6-njit) | 54 / 13 = 4.15 |
 | Ebram Mekhail              | 18 / 3 = 6     |
 | Aryan Nesti                | 18 / 4 = 4.5   |

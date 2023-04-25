@@ -29,25 +29,23 @@ export default function Home() {
           cardType: "summary_large_image",
         }}
       />
+      <div
+        className="flex lg:flex-row flex-col-reverse mx-auto items-center justify-between lg:px-6 xl:py-16 py-6 bg-white rounded-lg lg:shadow-2xl dark:bg-gray-800 mt-6"
+        style={{ maxWidth: "1500px" }}
+      >
+        <div className="flex flex-col justify-between lg:pe-4 py-4 ps-4 leading-snug lg:w-2/5 w-100">
+          <header className={styles.header}>
+            <h1 className="xl:text-5xl text-3xl font-extrabold leading-snug tracking-tight text-gray-900 dark:text-gray-100">
+              Engage, Innovate, and Transform Education
+            </h1>
+          </header>
 
-      <div>
-        <div
-          className="flex flex-row mx-auto items-center justify-between px-6 py-20 bg-white rounded-lg shadow-2xl dark:bg-gray-800 mt-6"
-          style={{ maxWidth: "1500px" }}
-        >
-          <div className="flex flex-col justify-between p-4 leading-snug w-2/5">
-            <header className={styles.header}>
-              <h1 className="text-5xl font-extrabold leading-snug tracking-tight text-gray-900 dark:text-gray-100">
-                Engage, Innovate, and Transform Education
-              </h1>
-            </header>
-
-            <main>
-              <p className="text-gray-600 dark:text-gray-400 my-4">
-                Our mission is to empower educators to unleash their creativity
-                and enhance the learning experience for students of all
-                backgrounds.
-                {/* Welcome
+          <main>
+            <p className="text-gray-600 dark:text-gray-400 my-4">
+              Our mission is to empower educators to unleash their creativity
+              and enhance the learning experience for students of all
+              backgrounds.
+              {/* Welcome
                 to MyWebClass.org, your go-to resource for exploring the
                 possibilities of AI and advanced engineering tools in the
                 classroom. Our mission is to empower educators to unleash their
@@ -55,41 +53,40 @@ export default function Home() {
                 all backgrounds. Join our community and discover how you can
                 harness the power of AI to revolutionize the way you teach and
                 engage with your students. Let's transform education together! */}
+            </p>
+            <div className="my-4">
+              <p className="text-gray-600 dark:text-gray-400">
+                Let's transform education together!
               </p>
-              <div className="my-4">
-                <p className="text-gray-600 dark:text-gray-400">
-                  Let's transform education together!
-                </p>
-                <SubscribeModal btnClassName="flex mt-8" />
-              </div>
-            </main>
-          </div>
-
-          <UndrawTeaching className="svg object-cover w-3/4 rounded-t-lg" />
+              <SubscribeModal btnClassName="lg:mt-12 mt-6 text-center" />
+            </div>
+          </main>
         </div>
-        <Head>
-          <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="description"
-            content="Learn how to build a personal website using Next.js"
-          />
-          <meta
-            property="og:image"
-            content={`https://og-image.vercel.app/${encodeURI(
-              siteTitle
-            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-          />
-          <meta name="og:title" content={siteTitle} />
-          <meta name="twitter:card" content="summary_large_image" />
-        </Head>{" "}
-        <Script
-          src="https://connect.facebook.net/en_US/sdk.js"
-          strategy="lazyOnload"
-          onLoad={() =>
-            console.log(`script loaded correctly, window.FB has been populated`)
-          }
-        />
+
+        <UndrawTeaching className="svg object-cover w-3/4 rounded-t-lg" />
       </div>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Learn how to build a personal website using Next.js"
+        />
+        <meta
+          property="og:image"
+          content={`https://og-image.vercel.app/${encodeURI(
+            siteTitle
+          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+        />
+        <meta name="og:title" content={siteTitle} />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>{" "}
+      <Script
+        src="https://connect.facebook.net/en_US/sdk.js"
+        strategy="lazyOnload"
+        onLoad={() =>
+          console.log(`script loaded correctly, window.FB has been populated`)
+        }
+      />
     </>
   );
 }
