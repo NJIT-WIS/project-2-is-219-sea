@@ -46,6 +46,7 @@ export default function Home() {
               and enhance the learning experience for students of all
               backgrounds.
               {/* Welcome
+
                 to MyWebClass.org, your go-to resource for exploring the
                 possibilities of AI and advanced engineering tools in the
                 classroom. Our mission is to empower educators to unleash their
