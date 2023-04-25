@@ -1,12 +1,12 @@
 {
-    "pages": [
-      {
-        "path": "/",
-        "title": "Neural Nexus"
-      },
-      {
-        "path": "/blog",
-        "title": "Neural Nexus | Blog"
-      }
-    ]
+  "pages": [
+    {
+      "path": "/",
+      "title": "MyWebClass"
+    },
+    {
+      "path": "/blog",
+      "title": "MyWebClass | Blog"
+    }
+  ]
 }

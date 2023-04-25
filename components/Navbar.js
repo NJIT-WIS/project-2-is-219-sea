@@ -10,7 +10,7 @@ import SchoolIcon from "@mui/icons-material/School";
 
 const Navbar = () => {
   return (
-    <header className="flex items-center justify-between py-10">
+    <header className="flex items-center justify-between pt-8 pb-4">
       <div>
         <Link
           href="/"
