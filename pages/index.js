@@ -1,19 +1,15 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
+import { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
-import UndrawTeaching from "../public/svgs/undraw_teaching.svg";
+import UndrawTeaching from "../public/svgs/undraw_educator.svg";
 
 import Script from "next/script";
-import Image from "next/image";
 
-import Date from "../components/date";
 import styles from "../components/layout.module.css";
 import { NextSeo } from "next-seo";
 import SubscribeModal from "../components/SubscribeModal";
 
-export default function Home({ allPostsData }) {
+export default function Home() {
   console.log(process.env.MAILCHIMP_API_KEY);
   return (
     <>
@@ -34,37 +30,42 @@ export default function Home({ allPostsData }) {
         }}
       />
 
-      <div className={styles.container}>
-        <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row  dark:border-gray-700 dark:bg-gray-800">
-          <div class="flex flex-col justify-between p-4 leading-normal">
+      <div>
+        <div
+          className="flex flex-row mx-auto items-center justify-between px-6 py-20 bg-white rounded-lg shadow-2xl dark:bg-gray-800 mt-6"
+          style={{ maxWidth: "1500px" }}
+        >
+          <div className="flex flex-col justify-between p-4 leading-snug w-2/5">
             <header className={styles.header}>
-              <h1 className={utilStyles.headingXl}>
-                Engage, Innovate, and Transform with AI-Powered Engineering
-                Tools
+              <h1 className="text-5xl font-extrabold leading-snug tracking-tight text-gray-900 dark:text-gray-100">
+                Engage, Innovate, and Transform Education
               </h1>
             </header>
 
             <main>
-              <p className="text-gray-600 dark:text-gray-400">
-                Welcome to MyWebClass.org, your go-to resource for exploring the
+              <p className="text-gray-600 dark:text-gray-400 my-4">
+                Our mission is to empower educators to unleash their creativity
+                and enhance the learning experience for students of all
+                backgrounds.
+                {/* Welcome
+                to MyWebClass.org, your go-to resource for exploring the
                 possibilities of AI and advanced engineering tools in the
                 classroom. Our mission is to empower educators to unleash their
                 creativity and enhance the learning experience for students of
                 all backgrounds. Join our community and discover how you can
                 harness the power of AI to revolutionize the way you teach and
-                engage with your students. Let's transform education together!
+                engage with your students. Let's transform education together! */}
               </p>
               <div className="my-4">
                 <p className="text-gray-600 dark:text-gray-400">
-                  Interested and would like to learn more? Stay up to date and
-                  subscribe to our newsletter!
+                  Let's transform education together!
                 </p>
-                <SubscribeModal btnClassName="flex justify-end mt-8" />
+                <SubscribeModal btnClassName="flex mt-8" />
               </div>
             </main>
           </div>
 
-          <UndrawTeaching className="svg object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" />
+          <UndrawTeaching className="svg object-cover w-3/4 rounded-t-lg" />
         </div>
         <Head>
           <link rel="icon" href="/favicon.ico" />
@@ -88,31 +89,6 @@ export default function Home({ allPostsData }) {
             console.log(`script loaded correctly, window.FB has been populated`)
           }
         />
-        {/* <header className={styles.header}>
-          <h1 className={utilStyles.headingXl}>
-            Engage, Innovate, and Transform with AI-Powered Engineering Tools
-          </h1>
-
-          <UndrawTeaching className="svg my-10" />
-        </header> */}
-        {/* <main>
-          <p>
-            Welcome to MyWebClass.org, your go-to resource for exploring the
-            possibilities of AI and advanced engineering tools in the classroom.
-            Our mission is to empower educators to unleash their creativity and
-            enhance the learning experience for students of all backgrounds.
-            Join our community and discover how you can harness the power of AI
-            to revolutionize the way you teach and engage with your students.
-            Let's transform education together!
-          </p>
-          <div className="my-4">
-            <p>
-              Interested and would like to learn more? Stay up to date and
-              subscribe to our newsletter!
-            </p>
-            <SubscribeModal btnClassName="flex justify-end mt-8" />
-          </div>
-        </main> */}
       </div>
     </>
   );

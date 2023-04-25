@@ -96,9 +96,9 @@ export default function SubscribeModal({ btnClassName }) {
         <button
           type="button"
           onClick={openModal}
-          className="mx-2 rounded-md border border-transparent bg-purple-200 px-4 py-2 text-sm font-medium text-purple-900 hover:bg-purple-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2"
+          className="rounded-md border border-transparent bg-purple-200 px-4 py-2 text-sm font-medium text-purple-900 hover:bg-purple-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2"
         >
-          Sign me up &#8594;
+          Sign up now
         </button>
       </div>
       <Transition appear show={isOpen} as={Fragment}>
