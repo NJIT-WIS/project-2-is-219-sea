@@ -1,6 +1,6 @@
 import { useState } from "react";
 import headerNavLinks from "../data/headerNavLinks";
-
+import Link from "next/link";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
 const MobileNav = () => {
@@ -71,12 +71,14 @@ const MobileNav = () => {
           <NavigationMenu.List className="fixed mt-8 h-full">
             {headerNavLinks.map((link) => (
               <NavigationMenu.Item key={link.title} className="px-12 py-4">
-                <NavigationMenu.Link
-                  href={link.href}
-                  className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
-                  onClick={onToggleNav}
-                >
-                  {link.title}
+                <NavigationMenu.Link asChild>
+                  <Link
+                    href={link.href}
+                    className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+                    onClick={onToggleNav}
+                  >
+                    {link.title}
+                  </Link>
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
             ))}
