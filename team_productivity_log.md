@@ -25,13 +25,14 @@ member made adequate and equal contributions to the project.
 | Implement Blog-Search Functionality               | 3            | [Issue 5](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/5)   | Done   | Stephen Ebrahim (se6-njit)   | 04/10/23    | 4/15/23      | user story       | Completed search functionality use blog content, title, author, etc.   |
 | Create blog component of website                  | 8            | [Issue 6](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/6)   | Done   | Stephen Ebrahim (se6-njit)   | 04/10/23    | 4/15/23      | user story       | Completed entire blog component of website                             |
 | Create Hero section in home page                  | 5            | [Issue 48](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/48) | Done   | Stephen Ebrahim (se6-njit)   | 04/19/23    | 4/25/23      | user story       | Fixed home page of website and added Hero section                      |
+| Implement Radix as Menubar                        | 5            | [Issue 47](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/47) | Done   | Stephen Ebrahim (se6-njit)   | 04/19/23    | 4/26/23      | user story       | Changed all of navbars (regular and responsive) to use Radix           |
 
 
 ## Accumulating Contributions
 
 | Team Member                | Total Story Points |
 | -------------------------- | ------------------ |
-| Stephen Ebrahim (se6-njit) | 54                 |
+| Stephen Ebrahim (se6-njit) | 59                 |
 | Ebram Mekhail              | 18                 |
 | Aryan Nesti                | 18                 |
 
@@ -43,6 +44,6 @@ member made adequate and equal contributions to the project.
 
 | Team Member                | Rating         |
 | -------------------------- | -------------- |
-| Stephen Ebrahim (se6-njit) | 54 / 13 = 4.15 |
+| Stephen Ebrahim (se6-njit) | 59 / 14 = 4.21 |
 | Ebram Mekhail              | 18 / 3 = 6     |
 | Aryan Nesti                | 18 / 4 = 4.5   |
