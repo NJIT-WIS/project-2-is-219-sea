@@ -59,7 +59,11 @@ export default function Home() {
               <p className="text-gray-600 dark:text-gray-400">
                 Let's transform education together!
               </p>
-              <SubscribeModal btnClassName="lg:mt-12 mt-6 text-center" />
+              <SubscribeModal
+                componentClassName="lg:mt-12 mt-6 text-center"
+                btnText="Sign up now →"
+                btnClassName="rounded-md border border-transparent bg-purple-200 px-4 py-2 text-xl inline-flex text-center items-center font-medium text-purple-900 hover:bg-purple-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2"
+              />
             </div>
           </main>
         </div>

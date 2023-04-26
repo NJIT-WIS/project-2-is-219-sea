@@ -1,5 +1,6 @@
 import { useState } from "react";
 import headerNavLinks from "../data/headerNavLinks";
+import SubscribeModal from "./SubscribeModal";
 import Link from "next/link";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
@@ -82,6 +83,12 @@ const MobileNav = () => {
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
             ))}
+
+            <SubscribeModal
+              componentClassName="px-12 py-4"
+              btnText="Subscribe"
+              btnClassName="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+            />
           </NavigationMenu.List>
         </NavigationMenu.Item>
       </NavigationMenu.List>

@@ -1,11 +1,14 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useRef } from "react";
 
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
-import { useRef } from "react";
 
-export default function SubscribeModal({ btnClassName }) {
+const SubscribeModal = ({
+  componentClassName = "",
+  btnText = "Subscribe",
+  btnClassName = "",
+}) => {
   let [isOpen, setIsOpen] = useState(false);
   let [email, setEmail] = useState("");
   let [successSnackbarOpen, setSuccessSnackbarOpen] = useState(false);
@@ -92,27 +95,14 @@ export default function SubscribeModal({ btnClassName }) {
 
   return (
     <>
-      <div className={btnClassName}>
+      <div className={componentClassName}>
         <button
           type="button"
           onClick={openModal}
           // className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          className="rounded-md border border-transparent bg-purple-200 px-4 py-2 text-xl inline-flex text-center items-center font-medium text-purple-900 hover:bg-purple-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2"
+          className={btnClassName}
         >
-          Sign up now
-          <svg
-            aria-hidden="true"
-            className="w-5 h-5 ml-2 -mr-1 flex-none"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
+          {btnText}
         </button>
       </div>
       <Transition appear show={isOpen} as={Fragment}>
@@ -219,4 +209,6 @@ export default function SubscribeModal({ btnClassName }) {
       </Snackbar>
     </>
   );
-}
+};
+
+export default SubscribeModal;

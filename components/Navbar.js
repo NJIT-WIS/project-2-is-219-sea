@@ -2,11 +2,11 @@ import siteMetadata from "../data/siteMetadata";
 import headerNavLinks from "../data/headerNavLinks";
 
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-
 import Link from "next/link";
 
 import MobileNav from "./MobileNav";
 import ThemeSwitch from "./ThemeSwitch";
+import SubscribeModal from "./SubscribeModal";
 
 import SchoolIcon from "@mui/icons-material/School";
 
@@ -37,6 +37,14 @@ const Navbar = () => {
                   </Link>
                 </NavigationMenu.Link>
               ))}
+
+              <NavigationMenu.Link>
+                <SubscribeModal
+                  componentClassName="inline"
+                  btnText="Subscribe"
+                  btnClassName="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 hover:no-underline"
+                />
+              </NavigationMenu.Link>
             </div>
             <ThemeSwitch />
             <MobileNav />
