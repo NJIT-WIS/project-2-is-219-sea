@@ -1,7 +1,7 @@
 import siteMetadata from "../data/siteMetadata";
 import headerNavLinks from "../data/headerNavLinks";
-import Logo from "../components/Logo";
-import Link from "../components/Link";
+
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
 import MobileNav from "./MobileNav";
 import ThemeSwitch from "./ThemeSwitch";
@@ -10,46 +10,76 @@ import SchoolIcon from "@mui/icons-material/School";
 
 const Navbar = () => {
   return (
-    <header className="flex items-center justify-between pt-8 pb-4">
-      <div>
-        <Link
-          href="/"
-          className="hover:no-underline"
-          aria-label={siteMetadata.headerTitle}
-        >
-          <div className="flex items-center justify-between">
-            <div className="">
-              <SchoolIcon className="mr-3" />
-            </div>
-            {typeof siteMetadata.headerTitle === "string" ? (
-              <div
-                style={{ marginBottom: "8px" }}
-                className="hidden h-6 text-2xl font-semibold sm:block"
-              >
+    <>
+      <NavigationMenu.Root className="pt-8 pb-4">
+        <NavigationMenu.List className="flex items-center justify-between">
+          <NavigationMenu.Item>
+            <NavigationMenu.Link href="/" className="hover:no-underline">
+              <SchoolIcon className="mr-3 mb-1" />
+              <div className="hidden h-6 text-2xl font-semibold sm:inline">
                 {siteMetadata.headerTitle}
               </div>
-            ) : (
-              siteMetadata.headerTitle
-            )}
-          </div>
-        </Link>
-      </div>
-      <div className="flex items-center text-base leading-5">
-        <div className="hidden sm:block">
-          {headerNavLinks.map((link) => (
-            <Link
-              key={link.title}
-              href={link.href}
-              className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 hover:no-underline"
-            >
-              {link.title}
-            </Link>
-          ))}
+            </NavigationMenu.Link>
+          </NavigationMenu.Item>
+          <NavigationMenu.Item className="flex items-center text-base leading-5">
+            <div className="hidden sm:block">
+              {headerNavLinks.map((link) => (
+                <NavigationMenu.Link
+                  key={link.title}
+                  href={link.href}
+                  className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 hover:no-underline"
+                >
+                  {link.title}
+                </NavigationMenu.Link>
+              ))}
+            </div>
+            <ThemeSwitch />
+            <MobileNav />
+          </NavigationMenu.Item>
+        </NavigationMenu.List>
+      </NavigationMenu.Root>
+
+      {/* <header className="flex items-center justify-between pt-8 pb-4">
+        <div>
+          <Link
+            href="/"
+            className="hover:no-underline"
+            aria-label={siteMetadata.headerTitle}
+          >
+            <div className="flex items-center justify-between">
+              <div className="">
+                <SchoolIcon className="mr-3" />
+              </div>
+              {typeof siteMetadata.headerTitle === "string" ? (
+                <div
+                  style={{ marginBottom: "8px" }}
+                  className="hidden h-6 text-2xl font-semibold sm:block"
+                >
+                  {siteMetadata.headerTitle}
+                </div>
+              ) : (
+                siteMetadata.headerTitle
+              )}
+            </div>
+          </Link>
         </div>
-        <ThemeSwitch />
-        <MobileNav />
-      </div>
-    </header>
+        <div className="flex items-center text-base leading-5">
+          <div className="hidden sm:block">
+            {headerNavLinks.map((link) => (
+              <Link
+                key={link.title}
+                href={link.href}
+                className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 hover:no-underline"
+              >
+                {link.title}
+              </Link>
+            ))}
+          </div>
+          <ThemeSwitch />
+          <MobileNav />
+        </div>
+      </header> */}
+    </>
   );
 };
 
