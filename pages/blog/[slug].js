@@ -2,13 +2,13 @@ import groq from "groq";
 import { client } from "../../lib/sanity.client";
 import urlFor from "../../lib/urlFor";
 import Head from "next/head";
-import Layout, { siteTitle } from "../../components/layout";
+import { siteTitle } from "../../components/layout";
 import styles from "../../components/layout.module.css";
 import { NextSeo } from "next-seo";
 import Script from "next/script";
-import Link from "next/link";
-import utilStyles from "../../styles/utils.module.css";
 import formatDate from "../../lib/utils/formatDate";
+
+import SubscribeModal from "../../components/SubscribeModal";
 
 import { PortableText } from "@portabletext/react";
 import CustomPortableTextComponents from "../../components/CustomPortableTextComponents";
@@ -99,20 +99,25 @@ function Post({ post, home }) {
         <Head>
           <NextSeo />
         </Head>
-        <section className="mb-10">
+        <section className="mb-8">
           <PortableText
             value={post.body}
             components={CustomPortableTextComponents}
           ></PortableText>
         </section>
       </main>
-      <div>
+      <div className="flex flex-col-reverse sm:flex-row sm:justify-between items-center gap-4">
         <button
           className="rounded-md border border-transparent bg-purple-200 px-4 py-2 text-sm font-medium text-purple-900 hover:bg-purple-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2"
           onClick={() => router.back()}
         >
           ← Back to blogs
         </button>
+        <SubscribeModal
+          componentClassName=""
+          btnText="Subscribe for more!"
+          btnClassName="rounded-md border border-transparent bg-purple-200 px-4 py-2 text-sm font-medium text-purple-900 hover:bg-purple-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2"
+        />
       </div>
     </div>
   );
