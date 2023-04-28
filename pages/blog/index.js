@@ -29,10 +29,9 @@ export const getStaticProps = async ({ preview = false }) => {
 export default function IndexPage({ data, initialDisplayPosts, pagination }) {
   return (
     <>
-
       <NextSeo
         title="MyWebClass | Blog"
-        description="This is a demo description"
+        description="Blog page of MyWebClass"
         canonical="https://www.MyWebClass.com"
       />
       <BlogList
