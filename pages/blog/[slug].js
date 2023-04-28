@@ -7,10 +7,7 @@ import styles from "../../components/layout.module.css";
 import { NextSeo } from "next-seo";
 import Script from "next/script";
 import formatDate from "../../lib/utils/formatDate";
-import Head from "next/head";
-
 import SubscribeModal from "../../components/SubscribeModal";
-
 import { PortableText } from "@portabletext/react";
 import CustomPortableTextComponents from "../../components/CustomPortableTextComponents";
 
