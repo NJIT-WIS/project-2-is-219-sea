@@ -1,6 +1,5 @@
 import { BlogList, query } from "../../components/BlogList";
 import { client } from "../../lib/sanity.client";
-
 // const PreviewBlogList = lazy(() => import('../../components/PreviewBlogList'))
 export const POSTS_PER_PAGE = 5;
 

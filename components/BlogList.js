@@ -3,7 +3,7 @@ import formatDate from "../lib/utils/formatDate";
 import Link from "../components/Link";
 import { useState } from "react";
 import Pagination from "./Pagination";
-
+import { NextSeo } from "next-seo";
 export const query = groq`
 *[_type == 'post'] {
   ...,
@@ -45,6 +45,22 @@ export function BlogList({
 
   return (
     <>
+      <NextSeo
+        title="MyWebClass"
+        description="This is a demo description"
+        canonical="https://www.MyWebClass.com"
+        openGraph={{
+          url: "https://www.MyWebClass.com",
+          title: "MyWebClass",
+          description:
+            "Welcome to MyWebClass, the blog webpage that explores the exciting and ever-evolving world of artificial intelligence. From neural networks and deep learning to machine learning and natural language processing, we delve into the latest advancements and applications of AI across various industries and fields.s",
+        }}
+        twitter={{
+          handle: "@MyWebClass",
+          site: "@MyWebClass.com",
+          cardType: "summary_large_image",
+        }}
+      />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-4 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">

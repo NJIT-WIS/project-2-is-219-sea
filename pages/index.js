@@ -13,22 +13,7 @@ export default function Home() {
   console.log(process.env.MAILCHIMP_API_KEY);
   return (
     <>
-      <NextSeo
-        title="MyWebClass"
-        description="This is a demo description"
-        canonical="https://www.MyWebClass.com"
-        openGraph={{
-          url: "https://www.MyWebClass.com",
-          title: "MyWebClass",
-          description:
-            "Welcome to MyWebClass, the blog webpage that explores the exciting and ever-evolving world of artificial intelligence. From neural networks and deep learning to machine learning and natural language processing, we delve into the latest advancements and applications of AI across various industries and fields.s",
-        }}
-        twitter={{
-          handle: "@MyWebClass",
-          site: "@MyWebClass.com",
-          cardType: "summary_large_image",
-        }}
-      />
+s
       <div
         className="flex lg:flex-row flex-col-reverse mx-auto items-center justify-between lg:px-6 xl:py-16 py-6 bg-white rounded-lg lg:shadow-2xl dark:bg-gray-800 mt-6"
         style={{ maxWidth: "1500px" }}
