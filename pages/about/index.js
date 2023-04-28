@@ -3,7 +3,7 @@ import UndrawTeam from "../../public/svgs/undraw_team_goals.svg";
 const About = () => {
   return (
     <div
-      className="flex flex-col mx-auto items-center justify-between lg:px-6 xl:py-16 py-6 bg-white rounded-lg lg:shadow-2xl dark:bg-gray-800 mt-6"
+      className="flex flex-col mx-auto items-center justify-between lg:px-6 xl:py-8 py-6 bg-white rounded-lg lg:shadow-2xl dark:bg-gray-800 mt-6"
       style={{ maxWidth: "1500px" }}
     >
       <UndrawTeam className="svg" style={{ maxWidth: "1000px" }} />
