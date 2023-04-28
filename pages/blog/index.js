@@ -1,5 +1,8 @@
 import { BlogList, query } from "../../components/BlogList";
 import { client } from "../../lib/sanity.client";
+
+import { NextSeo } from "next-seo";
+
 // const PreviewBlogList = lazy(() => import('../../components/PreviewBlogList'))
 export const POSTS_PER_PAGE = 5;
 
@@ -26,6 +29,12 @@ export const getStaticProps = async ({ preview = false }) => {
 export default function IndexPage({ data, initialDisplayPosts, pagination }) {
   return (
     <>
+
+      <NextSeo
+        title="MyWebClass | Blog"
+        description="This is a demo description"
+        canonical="https://www.MyWebClass.com"
+      />
       <BlogList
         data={data}
         initialDisplayPosts={initialDisplayPosts}
