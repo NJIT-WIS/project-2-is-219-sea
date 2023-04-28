@@ -3,7 +3,7 @@ import UndrawPrivacy from "../../public/svgs/undraw_privacy.svg";
 const Privacy = () => {
   return (
     <div
-      className="flex flex-col mx-auto items-center justify-between lg:px-6 xl:py-16 py-6 bg-white rounded-lg lg:shadow-2xl dark:bg-gray-800 mt-6"
+      className="flex flex-col mx-auto items-center justify-between lg:px-6 xl:py-8 py-6 bg-white rounded-lg lg:shadow-2xl dark:bg-gray-800 mt-6"
       style={{ maxWidth: "1500px" }}
     >
       <UndrawPrivacy
@@ -41,7 +41,7 @@ const Privacy = () => {
         <h3 className="text-xl sm:text-2xl font-medium leading-6 text-gray-900 dark:text-gray-100 mb-2">
           How We Share Your Information
         </h3>
-        <p className="text-gray-600 dark:text-gray-400">
+        <p className="text-gray-600 dark:text-gray-400 mb-8">
           We do not sell, rent, or share your personal information with third
           parties, except as required by law or as necessary to provide our
           services to you. We take appropriate measures to protect your personal
