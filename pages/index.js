@@ -13,7 +13,12 @@ export default function Home() {
   console.log(process.env.MAILCHIMP_API_KEY);
   return (
     <>
-s
+
+      <NextSeo
+        title="MyWebClass"
+        description="Landing page of MyWebClass"
+        canonical="https://www.MyWebClass.com"
+      />
       <div
         className="flex lg:flex-row flex-col-reverse mx-auto items-center justify-between lg:px-6 xl:py-16 py-6 bg-white rounded-lg lg:shadow-2xl dark:bg-gray-800 mt-6"
         style={{ maxWidth: "1500px" }}
