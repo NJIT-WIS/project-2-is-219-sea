@@ -7,6 +7,7 @@ import styles from "../../components/layout.module.css";
 import { NextSeo } from "next-seo";
 import Script from "next/script";
 import formatDate from "../../lib/utils/formatDate";
+import Head from "next/head";
 
 import SubscribeModal from "../../components/SubscribeModal";
 
@@ -44,6 +45,22 @@ function Post({ post, home }) {
 
   return (
     <div>
+      <NextSeo
+        title="MyWebClass | Blog"
+        description="This is a demo description"
+        canonical="https://www.MyWebClass.com"
+        openGraph={{
+          url: "https://www.MyWebClass.com",
+          title: "MyWebClass",
+          description:
+            "Welcome to MyWebClass, the blog webpage that explores the exciting and ever-evolving world of artificial intelligence. From neural networks and deep learning to machine learning and natural language processing, we delve into the latest advancements and applications of AI across various industries and fields.s",
+        }}
+        twitter={{
+          handle: "@MyWebClass",
+          site: "@MyWebClass.com",
+          cardType: "summary_large_image",
+        }}
+      />
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
