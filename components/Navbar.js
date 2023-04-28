@@ -33,7 +33,7 @@ const Navbar = () => {
                   <path d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z"></path>
                 </svg>
                 {/* <SchoolIcon className="mr-3 mb-1" /> */}
-                <div className="hidden h-6 text-2xl font-semibold sm:inline">
+                <div className="hidden h-6 text-2xl font-semibold md:inline">
                   {siteMetadata.headerTitle}
                 </div>
               </Link>
