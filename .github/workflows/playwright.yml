@@ -24,12 +24,14 @@ jobs:
           npm ci
           npx playwright install chromium
           npm install -g lighthouse chrome-launcher axe-core chromium wait-on
-      - name: Start the application
+     - name: Create Env File
         run: |
           touch .env
           echo NEXT_PUBLIC_SANITY_PROJECT_ID=${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }} >> .env
           echo NEXT_PUBLIC_SANITY_DATASET=${{ secrets.NEXT_PUBLIC_SANITY_DATASET }} >> .env
           echo NEXT_PUBLIC_SANITY_API_VERSION=${{ secrets.NEXT_PUBLIC_SANITY_API_VERSION }} >> .env
+      - name: Start the application
+        run: |
           export DISPLAY=:1
           npm run start & 
       - name: Run Playwright tests
