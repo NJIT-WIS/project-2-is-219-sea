@@ -31,6 +31,7 @@ jobs:
           echo NEXT_PUBLIC_SANITY_DATASET=${{ secrets.NEXT_PUBLIC_SANITY_DATASET }} >> .env
           echo NEXT_PUBLIC_SANITY_API_VERSION=${{ secrets.NEXT_PUBLIC_SANITY_API_VERSION }} >> .env
           export DISPLAY=:1
+          npm run build
           npm run start &
       - name: Run Playwright tests
         run: npx playwright test --config=playwright.config.js
