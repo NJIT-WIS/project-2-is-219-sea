@@ -1,5 +1,6 @@
 import { BlogList, query } from "../../components/BlogList";
 import { client } from "../../lib/sanity.client";
+import { NextSeo } from "next-seo";
 
 // const PreviewBlogList = lazy(() => import('../../components/PreviewBlogList'))
 export const POSTS_PER_PAGE = 5;
