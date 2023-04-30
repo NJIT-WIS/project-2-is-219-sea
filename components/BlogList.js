@@ -92,7 +92,11 @@ export function BlogList({
             const author = post.author.name;
 
             return (
-              <li key={slug} className="mb-10">
+              <li
+                key={slug}
+                className="mb-10"
+                style={{ animation: "transitionIn 1s" }}
+              >
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                   <dl>
                     <dt className="sr-only">Published on</dt>
