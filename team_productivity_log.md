@@ -29,13 +29,14 @@ member made adequate and equal contributions to the project.
 | Implement Radix as Menubar                        | 5            | [Issue 47](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/47) | Done   | Stephen Ebrahim (se6-njit)   | 04/19/23    | 4/26/23      | user story                 | Changed all of navbars (regular and responsive) to use Radix           |
 | Create About and Privacy Pages                    | 5            | [Issue 51](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/51) | Done   | Stephen Ebrahim (se6-njit)   | 04/27/23    | 4/27/23      | Documentation & user story | Created and added content to both about and privacy pages              |
 | Adding NextSeo Meta information across pages      | 3            | [Issue 54](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/54) | Done   | Stephen Ebrahim (se6-njit)   | 04/30/23    | 4/30/23      | user story                 | Added proper nextseo tags with opengraph and twitter                   |
+| Enhancing Home page and overall UI                | 5            | [Issue 56](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/56) | Done   | Stephen Ebrahim (se6-njit)   | 04/30/23    | 4/30/23      | user story                 | Added pitch part on home page and starte twitter part                  |
 
 
 ## Accumulating Contributions
 
 | Team Member                | Total Story Points |
 | -------------------------- | ------------------ |
-| Stephen Ebrahim (se6-njit) | 67                 |
+| Stephen Ebrahim (se6-njit) | 72                 |
 | Ebram Mekhail              | 18                 |
 | Aryan Nesti                | 18                 |
 
@@ -47,6 +48,6 @@ member made adequate and equal contributions to the project.
 
 | Team Member                | Rating         |
 | -------------------------- | -------------- |
-| Stephen Ebrahim (se6-njit) | 67 / 16 = 4.19 |
+| Stephen Ebrahim (se6-njit) | 72 / 17 = 4.22 |
 | Ebram Mekhail              | 18 / 3 = 6     |
 | Aryan Nesti                | 18 / 4 = 4.5   |
