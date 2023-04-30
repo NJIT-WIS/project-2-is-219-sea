@@ -2,11 +2,19 @@
   "pages": [
     {
       "path": "/",
-      "title": "MyWebClass"
+      "title": "MyWebClass | Home"
     },
     {
       "path": "/blog",
       "title": "MyWebClass | Blog"
+    },
+    {
+      "path": "/privacy",
+      "title": "MyWebClass | Privacy"
+    },
+    {
+      "path": "/about",
+      "title": "MyWebClass | About"
     }
   ]
 }
