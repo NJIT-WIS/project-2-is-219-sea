@@ -94,6 +94,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>{" "}
       <Script
+        async
         src="https://connect.facebook.net/en_US/sdk.js"
         strategy="lazyOnload"
         onLoad={() =>
