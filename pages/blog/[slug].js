@@ -44,17 +44,25 @@ function Post({ post, home }) {
     <div>
       <NextSeo
         title="MyWebClass | Blog"
-        description="This is a demo description"
-        canonical="https://www.MyWebClass.com"
+        description="Stay ahead in the world of teaching and learning with MyWebClass.org's informative blogs."
+        canonical="https://www.MyWebClass.org"
         openGraph={{
-          url: "https://www.MyWebClass.com",
-          title: "MyWebClass",
+          url: "https://www.MyWebClass.org",
+          title: "MyWebClass | Blog",
           description:
-            "Welcome to MyWebClass, the blog webpage that explores the exciting and ever-evolving world of artificial intelligence. From neural networks and deep learning to machine learning and natural language processing, we delve into the latest advancements and applications of AI across various industries and fields.s",
+            "Stay ahead in the world of teaching and learning with MyWebClass.org's informative blogs.",
+          images: [
+            {
+              url: "https://user-images.githubusercontent.com/114158692/235371267-88de76ee-9e07-43e5-b483-36b356a2a465.png",
+              width: 800,
+              height: 600,
+              alt: "unDraw.co Blog Post Image",
+            },
+          ],
         }}
         twitter={{
-          handle: "@MyWebClass",
-          site: "@MyWebClass.com",
+          handle: "@MyWebClassSEA",
+          site: "@MyWebClass",
           cardType: "summary_large_image",
         }}
       />
@@ -110,9 +118,6 @@ function Post({ post, home }) {
         </p>
       </header>
       <main>
-        <Head>
-          <NextSeo />
-        </Head>
         <section className="mb-8">
           <PortableText
             value={post.body}
