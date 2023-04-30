@@ -1,0 +1,54 @@
+name: Automatically test W3C validation, handicap accessibility
+# I already have a javascript style checking in quality controling using Eslint
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+
+  w3c-validation:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create ENV file 
+        run: |
+          touch .env
+          echo NEXT_PUBLIC_SANITY_PROJECT_ID=${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }} >> .env
+          echo NEXT_PUBLIC_SANITY_DATASET=${{ secrets.NEXT_PUBLIC_SANITY_DATASET }} >> .env
+          echo NEXT_PUBLIC_SANITY_API_VERSION=${{ secrets.NEXT_PUBLIC_SANITY_API_VERSION }} >> .env
+
+      - name: Install dependencies
+        run: |
+          npm install
+          npm install -g @axe-core/cli@4.6.0 chromedriver@111
+      - name: Starting Web Server
+        run: |
+          npm run build
+          npm run start &
+          
+      - name: W3C validation
+        run: npx html-validate http://localhost:3000 . > W3C-validation-report.xml || true
+
+      - name: Handicap Accessibility Validation
+        run: axe http://localhost:3000 --chromedriver-path /usr/local/bin/chromedriver --save handicap_accessibility.json || true
+
+      - name: Save W3C validation report
+        uses: actions/upload-artifact@v2
+        with:
+          name: W3C-validation-report
+          path: W3C-validation-report.xml
+
+      - name: Save Handicap Accessibility Validation
+        uses: actions/upload-artifact@v2
+        with:
+          name: handicap_accessibility
+          path: handicap_accessibility.json
