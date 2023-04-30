@@ -20,14 +20,13 @@ import siteMetadata from "../data/siteMetadata";
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
-      <Script
-        async
+      {/* <Script
         strategy="lazyOnload"
         // id = G-QKD03YMMCM
         src={`https://www.googletagmanager.com/gtag/js?id=G-QKD03YMMCM`}
-      />
+      /> */}
 
-      <Script async strategy="lazyOnload">
+      <Script strategy="lazyOnload">
         {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
