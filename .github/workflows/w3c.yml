@@ -3,10 +3,10 @@ name: Automatically test W3C validation, handicap accessibility
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
 
@@ -34,7 +34,7 @@ jobs:
         run: |
           npm run build
           npm run start &
-          
+
       - name: W3C validation
         run: npx html-validate http://localhost:3000 . > W3C-validation-report.xml || true
 
