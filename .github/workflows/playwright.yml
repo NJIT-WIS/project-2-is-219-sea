@@ -41,9 +41,9 @@ jobs:
           npm run start &
       - name: Generate Lighthouse Report
         run: |
-          lighthouse http://localhost:3000 --output html --output-path report.html --chrome-flags="--headless --no-sandbox --disable-gpu"
+          lighthouse http://localhost:3000 --output html --output-path ./test-results/report.html --chrome-flags="--headless --no-sandbox --disable-gpu"
       - name: Upload report, screenshots and videos of failed tests
         uses: actions/upload-artifact@v3
         with:
-          name: report
-          path: report.html
+          name: test-results
+          path: ./test-results
