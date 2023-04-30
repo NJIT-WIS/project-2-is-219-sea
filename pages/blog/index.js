@@ -1,6 +1,5 @@
 import { BlogList, query } from "../../components/BlogList";
 import { client } from "../../lib/sanity.client";
-
 import { NextSeo } from "next-seo";
 
 // const PreviewBlogList = lazy(() => import('../../components/PreviewBlogList'))
@@ -30,9 +29,28 @@ export default function IndexPage({ data, initialDisplayPosts, pagination }) {
   return (
     <>
       <NextSeo
-        title="MyWebClass | Blog"
-        description="Blog page of MyWebClass"
-        canonical="https://www.MyWebClass.com"
+        title="MyWebClass | Blogs"
+        description="Stay ahead in the world of teaching and learning with MyWebClass.org's informative blogs."
+        canonical="https://www.MyWebClass.org"
+        openGraph={{
+          url: "https://www.MyWebClass.org",
+          title: "MyWebClass | Blogs",
+          description:
+            "Stay ahead in the world of teaching and learning with MyWebClass.org's informative blogs.",
+          images: [
+            {
+              url: "https://user-images.githubusercontent.com/114158692/235371267-88de76ee-9e07-43e5-b483-36b356a2a465.png",
+              width: 800,
+              height: 600,
+              alt: "unDraw.co Blog Post Image",
+            },
+          ],
+        }}
+        twitter={{
+          handle: "@MyWebClassSEA",
+          site: "@MyWebClass",
+          cardType: "summary_large_image",
+        }}
       />
       <BlogList
         data={data}

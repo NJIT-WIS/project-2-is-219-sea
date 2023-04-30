@@ -3,7 +3,6 @@ import formatDate from "../lib/utils/formatDate";
 import Link from "../components/Link";
 import { useState } from "react";
 import Pagination from "./Pagination";
-import { NextSeo } from "next-seo";
 export const query = groq`
 *[_type == 'post'] {
   ...,

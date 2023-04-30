@@ -13,11 +13,29 @@ export default function Home() {
   console.log(process.env.MAILCHIMP_API_KEY);
   return (
     <>
-
       <NextSeo
-        title="MyWebClass"
-        description="Landing page of MyWebClass"
-        canonical="https://www.MyWebClass.com"
+        title="MyWebClass | Home"
+        description="MyWebClass.org empowers educators to revolutionize teaching and engage students using AI and advanced engineering tools. Join our community to explore the possibilities of AI in the classroom and transform education together."
+        canonical="https://www.MyWebClass.org"
+        openGraph={{
+          url: "https://www.MyWebClass.org",
+          title: "MyWebClass | Home",
+          description:
+            "MyWebClass.org empowers educators to revolutionize teaching and engage students using AI and advanced engineering tools. Join our community to explore the possibilities of AI in the classroom and transform education together.",
+          images: [
+            {
+              url: "https://user-images.githubusercontent.com/114158692/235370839-a16539f4-1b90-4bff-ba2c-40cb2db4a825.png",
+              width: 800,
+              height: 600,
+              alt: "unDraw.co Building Website Image",
+            },
+          ],
+        }}
+        twitter={{
+          handle: "@MyWebClassSEA",
+          site: "@MyWebClass",
+          cardType: "summary_large_image",
+        }}
       />
       <div
         className="flex lg:flex-row flex-col-reverse mx-auto items-center justify-between lg:px-6 xl:py-16 py-6 bg-white rounded-lg lg:shadow-2xl dark:bg-gray-800 mt-6"
