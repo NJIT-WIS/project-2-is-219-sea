@@ -26,11 +26,37 @@ export const getStaticProps = async ({ preview = false }) => {
 
 export default function IndexPage({ data, initialDisplayPosts, pagination }) {
   return (
-    <BlogList
-      data={data}
-      initialDisplayPosts={initialDisplayPosts}
-      pagination={pagination}
-      title="Latest Blogs"
-    />
+    <>
+      <NextSeo
+        title="MyWebClass | Blogs"
+        description="Stay ahead in the world of teaching and learning with MyWebClass.org's informative blogs."
+        canonical="https://www.MyWebClass.org"
+        openGraph={{
+          url: "https://www.MyWebClass.org",
+          title: "MyWebClass | Blogs",
+          description:
+            "Stay ahead in the world of teaching and learning with MyWebClass.org's informative blogs.",
+          images: [
+            {
+              url: "https://user-images.githubusercontent.com/114158692/235371267-88de76ee-9e07-43e5-b483-36b356a2a465.png",
+              width: 800,
+              height: 600,
+              alt: "unDraw.co Blog Post Image",
+            },
+          ],
+        }}
+        twitter={{
+          handle: "@MyWebClassSEA",
+          site: "@MyWebClass",
+          cardType: "summary_large_image",
+        }}
+      />
+      <BlogList
+        data={data}
+        initialDisplayPosts={initialDisplayPosts}
+        pagination={pagination}
+        title="Latest Blogs"
+      />
+    </>
   );
 }
