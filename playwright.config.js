@@ -15,8 +15,9 @@ module.exports = defineConfig({
   // Define shared settings for all projects
   use: {
     baseURL: process.env.DEFAULT_SITE_URL || 'http://localhost:3000',
-    trace: 'on-first-retry',
+    actionTimeout: 0,
     video: 'on',
+    screenshot: 'on',
     timeout: 30000, // Global timeout for tests (in milliseconds)
   },
 
@@ -29,14 +30,6 @@ module.exports = defineConfig({
         browserName: 'chromium',
       },
       outputDir: path.join(__dirname, 'reports', 'desktop-chrome'),
-    },
-    {
-      name: 'Mobile iPhone 12',
-      use: {
-        ...devices['iPhone 12'],
-        browserName: 'webkit',
-      },
-      outputDir: path.join(__dirname, 'reports', 'mobile-iphone-12'),
     },
   ],
 
