@@ -4,14 +4,15 @@ import { getSortedPostsData } from "../lib/posts";
 import UndrawTeaching from "../public/svgs/undraw_educator.svg";
 import UndrawChecklist from "../public/svgs/undraw_checklist.svg";
 import ReactStars from "react-stars";
-
 import Script from "next/script";
-
 import styles from "../components/layout.module.css";
 import { NextSeo } from "next-seo";
 import SubscribeModal from "../components/SubscribeModal";
 import CustomListItem from "../components/CustomListItem";
 import Image from "next/image";
+import tejPic from "../public/images/tej_patel.png";
+import marioPic from "../public/images/salah.png";
+import rachealPic from "../public/images/racheal.png";
 export default function Home() {
   const pitchingOfferList = [
     "Help shape the future of education and technology",
@@ -144,10 +145,9 @@ export default function Home() {
           <div className="flex flex-col items-center pt-10 pb-10">
             <Image
               priority
-              src="/../public/images/profile.jpg"
+              src={tejPic}
               className="rounded-full mb-4"
-              height={120}
-              width={120}
+              height={130}
               alt={"Tej Patel"}
             />
             <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
@@ -164,10 +164,9 @@ export default function Home() {
           <div className="flex flex-col items-center pt-10 pb-10">
             <Image
               priority
-              src="/../public/images/profile.jpg"
+              src={rachealPic}
               className="rounded-full mb-4"
-              height={120}
-              width={120}
+              height={130}
               alt={"Racheal Fekri"}
             />
             <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
@@ -183,10 +182,9 @@ export default function Home() {
           <div className="flex flex-col items-center pt-10 pb-10">
             <Image
               priority
-              src="/../public/images/profile.jpg"
+              src={marioPic}
               className="rounded-full mb-4"
-              height={120}
-              width={120}
+              height={130}
               alt={"Mario Salah"}
             />
             <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
