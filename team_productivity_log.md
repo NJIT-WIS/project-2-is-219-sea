@@ -31,6 +31,7 @@ member made adequate and equal contributions to the project.
 | Adding NextSeo Meta information across pages      | 3            | [Issue 54](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/54) | Done   | Stephen Ebrahim (se6-njit)   | 04/30/23    | 4/30/23      | user story                 | Added proper nextseo tags with opengraph and twitter                   |
 | Enhancing Home page and overall UI                | 5            | [Issue 56](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/56) | Done   | Stephen Ebrahim (se6-njit)   | 04/30/23    | 4/30/23      | user story                 | Added pitch part on home page and starte twitter part                  |
 | Integrating Google Analytics and adding GDPR      | 8            | [Issue 58](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/58) | Done   | Stephen Ebrahim (se6-njit)   | 04/30/23    | 4/30/23      | user story                 | Integrated GA and added GDPR                                           |
+| Implementing Mailchimp     | 8            | [Issue 58](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/58) | Done   | Aryan Nesti (aryannesti)   | 05/1/23    | 5/1/23      | user story                 | Embedded MailChimp into  Next.js                                           |
 
 
 ## Accumulating Contributions
@@ -39,7 +40,7 @@ member made adequate and equal contributions to the project.
 | -------------------------- | ------------------ |
 | Stephen Ebrahim (se6-njit) | 77                 |
 | Ebram Mekhail              | 18                 |
-| Aryan Nesti                | 18                 |
+| Aryan Nesti                | 24                 |
 
 ## Productivity Rating Calculation
 
@@ -51,4 +52,4 @@ member made adequate and equal contributions to the project.
 | -------------------------- | -------------- |
 | Stephen Ebrahim (se6-njit) | 77 / 18 = 4.28 |
 | Ebram Mekhail              | 18 / 3 = 6     |
-| Aryan Nesti                | 18 / 4 = 4.5   |
+| Aryan Nesti                | 24 / 5 = 4.8   |
