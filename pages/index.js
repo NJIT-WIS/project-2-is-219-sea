@@ -3,7 +3,7 @@ import { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 import UndrawTeaching from "../public/svgs/undraw_educator.svg";
 import UndrawChecklist from "../public/svgs/undraw_checklist.svg";
-import ReactStars from 'react-stars'
+import ReactStars from "react-stars";
 
 import Script from "next/script";
 
@@ -11,6 +11,7 @@ import styles from "../components/layout.module.css";
 import { NextSeo } from "next-seo";
 import SubscribeModal from "../components/SubscribeModal";
 import CustomListItem from "../components/CustomListItem";
+import Image from "next/image";
 export default function Home() {
   const pitchingOfferList = [
     "Help shape the future of education and technology",
@@ -141,37 +142,61 @@ export default function Home() {
       >
         <div className="bg-white rounded-lg shadow-2xl dark:bg-gray-800 mt-6 lg:w-1/3 w-full h-80">
           <div className="flex flex-col items-center pt-10 pb-10">
-              <img className="h-24 mb-3 rounded-full shadow-lg" src="https://media.discordapp.net/attachments/525895583907446786/1102436207230734368/Screenshot_20230430_112715.png" alt="Tej Patel"/>
-              <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Tej Patel</h5>
-              <span className="text-center text-sm text-gray-500 dark:text-gray-400">"This service changed my life."</span>
-              <ReactStars
-              edit={false}
-              count={5}
-              size={50}
-              color1={'#ffd700'} />          </div>
+            <Image
+              priority
+              src="/../public/images/profile.jpg"
+              className="rounded-full mb-4"
+              height={120}
+              width={120}
+              alt={"Tej Patel"}
+            />
+            <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+              Tej Patel
+            </h5>
+            <span className="text-center text-sm text-gray-500 dark:text-gray-400">
+              "This service changed my life."
+            </span>
+            <ReactStars edit={false} count={5} size={50} color1={"#ffd700"} />{" "}
+          </div>
+        </div>
+
+        <div className="bg-white rounded-lg shadow-2xl dark:bg-gray-800 mt-6 lg:w-1/3 w-full h-80">
+          <div className="flex flex-col items-center pt-10 pb-10">
+            <Image
+              priority
+              src="/../public/images/profile.jpg"
+              className="rounded-full mb-4"
+              height={120}
+              width={120}
+              alt={"Racheal Fekri"}
+            />
+            <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+              Racheal Fekri
+            </h5>
+            <span className="text-center text-sm text-gray-500 dark:text-gray-400">
+              "Absolutely amazing, exceeded expectations!"
+            </span>
+            <ReactStars edit={false} count={5} size={50} color1={"#ffd700"} />{" "}
+          </div>
         </div>
         <div className="bg-white rounded-lg shadow-2xl dark:bg-gray-800 mt-6 lg:w-1/3 w-full h-80">
           <div className="flex flex-col items-center pt-10 pb-10">
-                <img className="h-24 mb-3 rounded-full shadow-lg" src="https://cdn.discordapp.com/attachments/525895583907446786/1102436646630203483/image.png" alt="Racheal Fekri"/>
-                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Racheal Fekri</h5>
-                <span className="text-center text-sm text-gray-500 dark:text-gray-400">"Absolutely amazing, exceeded expectations!"</span>
-                <ReactStars
-              edit={false}
-              count={5}
-              size={50}
-              color1={'#ffd700'} />            </div>
-        </div>
-        <div className="bg-white rounded-lg shadow-2xl dark:bg-gray-800 mt-6 lg:w-1/3 w-full h-80">
-        <div className="flex flex-col items-center pt-10 pb-10">
-              <img className="h-24 mb-3 rounded-full shadow-lg" src="https://media.discordapp.net/attachments/525895583907446786/1102436434784305242/Screenshot_20230430_112840.png" alt="Mario Salah"/>
-              <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Mario Salah</h5>
-              <span className="text-center text-sm text-gray-500 dark:text-gray-400">"Exceptional service, highly recommended!"</span>
-              <ReactStars
-              edit={false}
-              count={5}
-              size={50}
-              color1={'#ffd700'} />
-              {/* <img className="w-28  mt-5 mb-3  shadow-lg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/5_stars.svg/1280px-5_stars.svg.png" alt="5 Stars"/> */}
+            <Image
+              priority
+              src="/../public/images/profile.jpg"
+              className="rounded-full mb-4"
+              height={120}
+              width={120}
+              alt={"Mario Salah"}
+            />
+            <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+              Mario Salah
+            </h5>
+            <span className="text-center text-sm text-gray-500 dark:text-gray-400">
+              "Exceptional service, highly recommended!"
+            </span>
+            <ReactStars edit={false} count={5} size={50} color1={"#ffd700"} />
+            {/* <img className="w-28  mt-5 mb-3  shadow-lg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/5_stars.svg/1280px-5_stars.svg.png" alt="5 Stars"/> */}
           </div>
         </div>
       </div>
