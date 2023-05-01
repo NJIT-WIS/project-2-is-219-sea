@@ -177,7 +177,6 @@ const SubscribeModal = ({
                               type="email"
                               value={email}
                               name="EMAIL"
-                              class="required email"
                               id="mce-EMAIL"
                               required
                               ref={inputRef}
