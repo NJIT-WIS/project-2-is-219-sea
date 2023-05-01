@@ -150,9 +150,9 @@ export default function Home() {
               height={130}
               alt={"Tej Patel"}
             />
-            <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+            <p className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
               Tej Patel
-            </h5>
+            </p>
             <span className="text-center text-sm text-gray-500 dark:text-gray-400">
               "This service changed my life."
             </span>
@@ -169,9 +169,9 @@ export default function Home() {
               height={130}
               alt={"Racheal Fekri"}
             />
-            <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+            <p className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
               Racheal Fekri
-            </h5>
+            </p>
             <span className="text-center text-sm text-gray-500 dark:text-gray-400">
               "Absolutely amazing, exceeded expectations!"
             </span>
@@ -187,9 +187,9 @@ export default function Home() {
               height={130}
               alt={"Mario Salah"}
             />
-            <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+            <p className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
               Mario Salah
-            </h5>
+            </p>
             <span className="text-center text-sm text-gray-500 dark:text-gray-400">
               "Exceptional service, highly recommended!"
             </span>
