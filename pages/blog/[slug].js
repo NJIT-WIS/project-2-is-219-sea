@@ -41,7 +41,7 @@ function Post({ post, home }) {
   }
 
   return (
-    <div style={{ animation: "transitionIn 1s" }}>
+    <div style={{ animation: "transitionIn 1s", maxWidth: "1500px" }}>
       <NextSeo
         title="MyWebClass | Blog"
         description="Stay ahead in the world of teaching and learning with MyWebClass.org's informative blogs."
