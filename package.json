@@ -24,6 +24,7 @@
     "csv-parser": "^3.0.0",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
+    "flowbite": "^1.6.5",
     "fs": "0.0.1-security",
     "glob": "^9.3.2",
     "gray-matter": "^4.0.3",
