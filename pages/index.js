@@ -143,7 +143,7 @@ export default function Home() {
           <div className="flex flex-col items-center pt-10 pb-10">
               <img className="h-24 mb-3 rounded-full shadow-lg" src="https://media.discordapp.net/attachments/525895583907446786/1102436207230734368/Screenshot_20230430_112715.png" alt="Tej Patel"/>
               <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Tej Patel</h5>
-              <span className="text-sm text-gray-500 dark:text-gray-400">"This service changed my life."</span>
+              <span className="text-center text-sm text-gray-500 dark:text-gray-400">"This service changed my life."</span>
               <ReactStars
               edit={false}
               count={5}
@@ -154,7 +154,7 @@ export default function Home() {
           <div className="flex flex-col items-center pt-10 pb-10">
                 <img className="h-24 mb-3 rounded-full shadow-lg" src="https://cdn.discordapp.com/attachments/525895583907446786/1102436646630203483/image.png" alt="Racheal Fekri"/>
                 <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Racheal Fekri</h5>
-                <span className="text-sm text-gray-500 dark:text-gray-400">"Absolutely amazing, exceeded expectations!"</span>
+                <span className="text-center text-sm text-gray-500 dark:text-gray-400">"Absolutely amazing, exceeded expectations!"</span>
                 <ReactStars
               edit={false}
               count={5}
@@ -165,7 +165,7 @@ export default function Home() {
         <div className="flex flex-col items-center pt-10 pb-10">
               <img className="h-24 mb-3 rounded-full shadow-lg" src="https://media.discordapp.net/attachments/525895583907446786/1102436434784305242/Screenshot_20230430_112840.png" alt="Mario Salah"/>
               <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">Mario Salah</h5>
-              <span className="text-sm text-gray-500 dark:text-gray-400">"Exceptional service, highly recommended!"</span>
+              <span className="text-center text-sm text-gray-500 dark:text-gray-400">"Exceptional service, highly recommended!"</span>
               <ReactStars
               edit={false}
               count={5}
