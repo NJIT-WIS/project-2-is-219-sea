@@ -76,6 +76,20 @@ const Privacy = () => {
             be 100% secure.
           </p>{" "}
           <h3 className="text-xl sm:text-2xl font-medium leading-6 text-gray-900 dark:text-gray-100 mb-2">
+            Google Analytics
+          </h3>
+          <p className="text-gray-600 dark:text-gray-400 mb-8">
+            At MyWebClass.org, we use Google Analytics to gather insights into
+            how our website is being used and to improve the user experience. We
+            collect information such as the pages visited and how frequently the
+            site is accessed. This helps us to better engage with our audience
+            and innovate our content to transform education. Your privacy is
+            important to us, and we ensure that no personally identifiable
+            information is collected through Google Analytics. We are committed
+            to protecting your privacy while using advanced tools to enhance
+            your learning experience.
+          </p>{" "}
+          <h3 className="text-xl sm:text-2xl font-medium leading-6 text-gray-900 dark:text-gray-100 mb-2">
             Your Rights
           </h3>
           <p className="text-gray-600 dark:text-gray-400">

@@ -1,5 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState, useRef } from "react";
+import Image from "next/image";
+import MailChimpLogoDark from "../public/images/MailChimpLogoDark.png";
+import MailChimpLogo from "../public/images/MailChimpLogo.png";
 
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
@@ -145,59 +148,62 @@ const SubscribeModal = ({
                       education together!
                     </p>
                   </div>{" "}
-                  <div className="m-6">
+                  <div className="mt-3 ms-3 me-3">
                     <label
                       htmlFor="email"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                       Email address
-                    </label> 
+                    </label>
                     <form
                       action="https://github.us21.list-manage.com/subscribe/post?u=06f9e4fc28f032e2928492757&amp;id=eef3a18bfe&amp;f_id=0011b2e1f0"
                       method="post"
                       id="mc-embedded-subscribe-form"
                       name="mc-embedded-subscribe-form"
-                      class="validate"
+                      className="validate"
                       target="_blank"
                       noValidate
                     >
                       <div id="mc_embed_signup_scroll">
                         {/* <h2>Subscribe</h2>
-                        <div class="indicates-required">
-                          <span class="asterisk">*</span> indicates required
+                        <div className="indicates-required">
+                          <span className="asterisk">*</span> indicates required
                         </div> */}
-                        <div class="mc-field-group" >
+                        <div className="mc-field-group">
                           {/* <label for="mce-EMAIL">
-                            Email Address <span class="asterisk">*</span>
+                            Email Address <span className="asterisk">*</span>
                           </label> */}
                           <input
-                              onChange={handleChange}
-                              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="john.doe@gmail.com"
-                              type="email"
-                              value={email}
-                              name="EMAIL"
-                              id="mce-EMAIL"
-                              required
-                              ref={inputRef}
+                            onChange={handleChange}
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="john.doe@gmail.com"
+                            type="email"
+                            value={email}
+                            name="EMAIL"
+                            id="mce-EMAIL"
+                            required
+                            ref={inputRef}
                           />
-                          <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+                          <span
+                            id="mce-EMAIL-HELPERTEXT"
+                            className="helper_text"
+                          ></span>
                         </div>
-                        <div id="mce-responses" class="clear foot">
+                        <div id="mce-responses" className="clear foot">
                           <div
-                            class="response"
+                            className="response"
                             id="mce-error-response"
-                            style={{ display: 'none' }}
+                            style={{ display: "none" }}
                           ></div>
                           <div
-                            class="response"
+                            className="response"
                             id="mce-success-response"
-                            style={{ display: 'none' }}
+                            style={{ display: "none" }}
                           ></div>
                         </div>
                         {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups*/}
                         <div
-                          style={{ position: 'absolute', left: '-5000px' }}
+                          style={{ position: "absolute", left: "-5000px" }}
                           aria-hidden="true"
                         >
                           <input
@@ -216,11 +222,12 @@ const SubscribeModal = ({
                               id="mc-embedded-subscribe"
                               disabled={email.length == 0 ? true : false}
                               className={
-                                  "mx-2 rounded-md border border-transparent px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2" +
-                                  (email.length == 0
-                                    ? " bg-gray-200 dark: dark:bg-gray-700 text-gray-900 dark:text-white focus-visible:ring-gray-800"
-                                    : " bg-green-100 text-green-900 hover:bg-green-300 focus-visible:ring-green-500")
-                              }/>
+                                "mx-2 rounded-md border border-transparent px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2" +
+                                (email.length == 0
+                                  ? " bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white focus-visible:ring-gray-800"
+                                  : " bg-green-100 text-green-900 hover:bg-green-300 focus-visible:ring-green-500")
+                              }
+                            />
                             <button
                               type="button"
                               className="mx-2 rounded-md border border-transparent bg-red-100 px-4 py-2 text-sm font-medium text-red-900 hover:bg-red-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
@@ -232,10 +239,23 @@ const SubscribeModal = ({
                         </div>
                         <p className="mt-4 flex flex-row justify-center">
                           <a
+                            className="font-bold hover:no-underline"
                             href="http://eepurl.com/io5ebI"
                             title="Mailchimp - email marketing made easy and fun"
                           >
-                          <img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" />
+                            Powered By &nbsp;
+                            <Image
+                              src={MailChimpLogoDark}
+                              className="hidden dark:inline"
+                              style={{ maxWidth: "200px" }}
+                              alt="Mail Chimp Dark Logo"
+                            />
+                            <Image
+                              src={MailChimpLogo}
+                              className="block dark:hidden inline"
+                              style={{ maxWidth: "200px" }}
+                              alt="Mail Chimp Logo"
+                            />
                           </a>
                         </p>
                       </div>
