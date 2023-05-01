@@ -22,6 +22,7 @@ test('Nav Bar Test', async ({ page }) => {
   test.setTimeout(50000)
   // Expect a title "to contain" a substring.
   await page.goto('http://localhost:3000')
+  await page.getByText('I accept').first().click()
   await page.evaluate(scroll, {direction: "down", speed: "slow"});
   await page.getByText('Blog').first().click()
   await page.evaluate(scroll, {direction: "down", speed: "slow"});
