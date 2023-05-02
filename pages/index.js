@@ -1,18 +1,23 @@
+// next components
 import Head from "next/head";
-import { siteTitle } from "../components/layout";
-import { getSortedPostsData } from "../lib/posts";
-import UndrawTeaching from "../public/svgs/undraw_educator.svg";
-import UndrawChecklist from "../public/svgs/undraw_checklist.svg";
-import ReactStars from "react-stars";
-import Script from "next/script";
-import styles from "../components/layout.module.css";
-import { NextSeo } from "next-seo";
-import SubscribeModal from "../components/SubscribeModal";
-import CustomListItem from "../components/CustomListItem";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
+import Script from "next/script";
+
+import CustomListItem from "../components/CustomListItem";
+import { siteTitle } from "../components/layout";
+import styles from "../components/layout.module.css";
+import SubscribeModal from "../components/SubscribeModal";
+import { getSortedPostsData } from "../lib/posts";
+
+// images / svgs
 import tejPic from "../public/images/tej_patel.png";
 import marioPic from "../public/images/salah.png";
 import rachealPic from "../public/images/racheal.png";
+import UndrawTeaching from "../public/svgs/undraw_educator.svg";
+import UndrawChecklist from "../public/svgs/undraw_checklist.svg";
+import ReactStars from "react-stars";
+
 export default function Home() {
   const pitchingOfferList = [
     "Help shape the future of education and technology",
@@ -23,7 +28,7 @@ export default function Home() {
     "Share your knowledge and expertise with others and learn from them",
     "Receive recognition for your hard work and dedication Feel proud of the work you do and the difference you make",
   ];
-  // console.log(process.env.MAILCHIMP_API_KEY);
+
   return (
     <>
       <NextSeo
@@ -194,7 +199,6 @@ export default function Home() {
               "Exceptional service, highly recommended!"
             </span>
             <ReactStars edit={false} count={5} size={50} color1={"#ffd700"} />
-            {/* <img className="w-28  mt-5 mb-3  shadow-lg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/5_stars.svg/1280px-5_stars.svg.png" alt="5 Stars"/> */}
           </div>
         </div>
       </div>

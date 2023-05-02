@@ -10,6 +10,7 @@ import formatDate from "../../lib/utils/formatDate";
 import SubscribeModal from "../../components/SubscribeModal";
 import { PortableText } from "@portabletext/react";
 import CustomPortableTextComponents from "../../components/CustomPortableTextComponents";
+import Image from "next/image";
 
 import { useRouter } from "next/router";
 
@@ -92,7 +93,7 @@ function Post({ post, home }) {
         <p className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
           {formatDate(post._createdAt)}
         </p>
-        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 mb-1">
+        <h1 className="text-4xl text-center font-extrabold tracking-tight text-gray-900 dark:text-gray-100 mb-1">
           {post.title}
         </h1>
         <div className="flex flex-wrap">
@@ -106,10 +107,11 @@ function Post({ post, home }) {
           ))}
         </div>
         {post.mainImage && (
-          <img
-            src={urlFor(post.mainImage).url()}
-            style={{ width: "70%", maxHeight: "350px" }}
+          <Image
             className="m-8"
+            width={600}
+            height={350}
+            src={urlFor(post.mainImage).url()}
             alt={"unDraw.co: " + post.title}
           />
         )}

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const CustomPortableTextComponents = {
   block: {
     normal: ({ children }) => {
@@ -25,7 +27,9 @@ const CustomPortableTextComponents = {
     ),
   },
   types: {
-    image: ({ value }) => <img src={value.imageUrl} />,
+    image: ({ value }) => (
+      <Image width={300} height={200} src={value.imageUrl} alt="blog image" />
+    ),
     callToAction: ({ value, isInline }) =>
       isInline ? (
         <a href={value.url}>{value.text}</a>
