@@ -36,8 +36,11 @@ member made adequate and equal contributions to the project.
 | Enhancing Home page and overall UI                | 5            | [Issue 56](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/56) | Done   | Stephen Ebrahim (se6-njit)   | 04/30/23    | 4/30/23      | user story                 | Added pitch part on home page and starte twitter part                   |
 | Integrating Google Analytics and adding GDPR      | 8            | [Issue 58](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/58) | Done   | Stephen Ebrahim (se6-njit)   | 04/30/23    | 4/30/23      | user story                 | Integrated GA and added GDPR                                            |
 | Implementing Mailchimp                            | 8            | [Issue 60](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/60) | Done   | Aryan Nesti (aryannesti)     | 05/1/23     | 5/1/23       | user story                 | Embedded MailChimp into  Next.js                                        |
-| Update Mailchimp UI                            | 5            | [Issue 60](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/60) | Done   | Aryan Nesti (aryannesti)     | 05/3/23     | 5/3/23       | bug                 | Updated the Embedded Mailchimp into the popup for sign up                                        |
-| Update all text to MyWebclass                            | 1            | [Issue 68](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/68) | Done   | Aryan Nesti (aryannesti)     | 05/3/23     | 5/3/23       | documentation                 | Fix Mailchimp subscription confirmation to say MyWebclass                                        |
+| Update Mailchimp UI                               | 5            | [Issue 60](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/60) | Done   | Aryan Nesti (aryannesti)     | 05/3/23     | 5/3/23       | bug                        | Updated the Embedded Mailchimp into the popup for sign up               |
+| Update all text to MyWebclass                     | 1            | [Issue 68](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/68) | Done   | Aryan Nesti (aryannesti)     | 05/3/23     | 5/3/23       | documentation              | Fix Mailchimp subscription confirmation to say MyWebclass               |
+| Implement artillery for testing                   | 8            | [Issue 66](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/66) | Done   | Ebram Mekhail (ebrammekhail) | 5/3/23      | 5/3/23       | devops                     | Added artillery for testing and saved artificant                        |
+| Add build and bundle metrics                      | 5            | [Issue 71](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/71) | Done   | Ebram Mekhail (ebrammekhail) | 5/3/23      | 5/3/23       | devops                     | Added build and bundle metrics for optimization                         |
+| Quality Control implementation with eslint        | 5            | [Issue 72](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/72) | Done   | Ebram Mekhail (ebrammekhail) | 5/3/23      | 5/3/23       | devops                     | Implmented eslint for quality control purposes.                         |
 
 
 ## Accumulating Contributions
@@ -45,7 +48,7 @@ member made adequate and equal contributions to the project.
 | Team Member                  | Total Story Points |
 | --------------------------   | ------------------ |
 | Stephen Ebrahim (se6-njit)   | 77                 |
-| Ebram Mekhail (ebrammekhail) | 33                 |
+| Ebram Mekhail (ebrammekhail) | 51                 |
 | Aryan Nesti                  | 30                 |
 
 ## Productivity Rating Calculation
@@ -57,5 +60,5 @@ member made adequate and equal contributions to the project.
 | Team Member                | Rating         |
 | -------------------------- | -------------- |
 | Stephen Ebrahim (se6-njit) | 77 / 18 = 4.28 |
-| Ebram Mekhail              | 33 / 7 = 4.7   |
+| Ebram Mekhail              | 51 / 10 = 5.1  |
 | Aryan Nesti                | 30 / 7 = 4.3   |
