@@ -6,29 +6,26 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  artillery:
     runs-on: ubuntu-latest
+
+    container: artilleryio/artillery:latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "17.x"
+      - name: Make reports directory
+        run: mkdir reports
 
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          npm ci
-          npm install -g artillery
+      - name: Execute load tests
+        run: /home/node/artillery/bin/run run --output reports/report.json artillery-test.yml
 
-      - name: Run Artillery load test
-        run: artillery run artillery-test.yml
+      - name: Generate HTML report
+        run: /home/node/artillery/bin/run report --output reports/report reports/report.json
 
-      - name: Upload Artillery report artifact
+      - name: Archive test report
         uses: actions/upload-artifact@v2
         with:
-          name: artillery-report
-          path: reports
-  
+          name: artillery-test-report
+          path: reports/*
