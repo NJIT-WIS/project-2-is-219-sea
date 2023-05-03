@@ -41,6 +41,8 @@ member made adequate and equal contributions to the project.
 | Implement artillery for testing                   | 8            | [Issue 66](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/66) | Done   | Ebram Mekhail (ebrammekhail) | 5/3/23      | 5/3/23       | devops                     | Added artillery for testing and saved artificant                        |
 | Add build and bundle metrics                      | 5            | [Issue 71](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/71) | Done   | Ebram Mekhail (ebrammekhail) | 5/3/23      | 5/3/23       | devops                     | Added build and bundle metrics for optimization                         |
 | Quality Control implementation with eslint        | 5            | [Issue 72](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/72) | Done   | Ebram Mekhail (ebrammekhail) | 5/3/23      | 5/3/23       | devops                     | Implmented eslint for quality control purposes.                         |
+| Clean up dupe actions                             | 3            | [Issue 75](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/75) | Done   | Ebram Mekhail (ebrammekhail) | 5/3/23      | 5/3/23       | duplicate                  | Removed duplicate github actions that were not working                  |
+
 
 
 ## Accumulating Contributions
@@ -48,7 +50,7 @@ member made adequate and equal contributions to the project.
 | Team Member                  | Total Story Points |
 | --------------------------   | ------------------ |
 | Stephen Ebrahim (se6-njit)   | 77                 |
-| Ebram Mekhail (ebrammekhail) | 51                 |
+| Ebram Mekhail (ebrammekhail) | 54                 |
 | Aryan Nesti                  | 30                 |
 
 ## Productivity Rating Calculation
@@ -60,5 +62,5 @@ member made adequate and equal contributions to the project.
 | Team Member                | Rating         |
 | -------------------------- | -------------- |
 | Stephen Ebrahim (se6-njit) | 77 / 18 = 4.28 |
-| Ebram Mekhail              | 51 / 10 = 5.1  |
+| Ebram Mekhail              | 54 / 11 = 4.9  |
 | Aryan Nesti                | 30 / 7 = 4.3   |
