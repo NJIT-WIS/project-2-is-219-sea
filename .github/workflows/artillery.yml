@@ -12,6 +12,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Make reports directory
+        run: mkdir reports
+        
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
