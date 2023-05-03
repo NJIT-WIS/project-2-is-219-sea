@@ -1,0 +1,47 @@
+name: Metrics
+
+on:
+  push:
+    branches:
+      - "*"
+  pull_request:
+    branches:
+      - "*"
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build and bundle
+      run: |
+        start=$(date +%s)
+        npm run build
+        end=$(date +%s)
+        echo $(expr $end - $start) > build-time.txt
+        du -sh dist/ > bundle-size.txt
+    - name: Save Build Time report
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-time
+        path: build-time.txt
+
+    - name: Save Bundle Time report
+      uses: actions/upload-artifact@v2
+      with:
+        name: bundle-size
+        path: bundle-size.txt
+
+    - name: Save build time and bundle size
+      run: |
+        echo "::set-output name=build-time::$(cat build-time.txt)"
+        echo "::set-output name=bundle-size::$(cat bundle-size.txt)"
+    outputs:
+      build-time: ${{ steps.measure-build-time.outputs.time }}
+      bundle-size: ${{ steps.measure-bundle-size.outputs.size }}
