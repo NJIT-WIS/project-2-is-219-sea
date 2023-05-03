@@ -1,0 +1,33 @@
+config:
+  target: "https://njit-wis.github.io/project-2-is-219-sea/"
+  phases:
+    - duration: 60
+      arrivalRate: 20
+  defaults:
+    headers:
+      User-Agent: "Artillery"
+      Accept: "application/json"
+
+scenarios:
+  - name: "Homepage and Pages load test"
+    flow:
+      - get:
+          url: "/"
+          name: "Homepage"
+          expect:
+            - statusCode: 200
+      - get:
+          url: "/blog"
+          name: "Blog"
+          expect:
+            - statusCode: 200
+      - get:
+          url: "/about"
+          name: "About"
+          expect:
+            - statusCode: 200
+      - get:
+          url: "/privacy"
+          name: "Privacy"
+          expect:
+            - statusCode: 200
