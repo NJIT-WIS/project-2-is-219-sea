@@ -1,0 +1,30 @@
+name: Quality Control
+
+on:
+  push:
+    branches:
+      - "*"
+  pull_request:
+    branches:
+      - "*"
+jobs:
+  quality-control:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        npm install eslint
+    - name: Eslint Javascript Quality Control
+      run: npx eslint --format=checkstyle . > eslint-report.xml || true
+
+    - name: Save ESLint report
+      uses: actions/upload-artifact@v2
+      with:
+        name: eslint-report
+        path: eslint-report.xml
+
+
