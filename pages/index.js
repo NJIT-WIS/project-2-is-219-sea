@@ -69,6 +69,7 @@ export default function Home() {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="google-site-verification" content="zo3akath6oM_ovbSiBakfiWSQuEREnwDsFM5r7AF1wY" />
       </Head>{" "}
       <Script
         src="https://connect.facebook.net/en_US/sdk.js"
