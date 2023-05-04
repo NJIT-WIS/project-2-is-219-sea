@@ -43,6 +43,7 @@ member made adequate and equal contributions to the project.
 | Quality Control implementation with eslint        | 5            | [Issue 72](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/72) | Done   | Ebram Mekhail (ebrammekhail) | 5/3/23      | 5/3/23       | devops                     | Implmented eslint for quality control purposes.                         |
 | Clean up dupe actions                             | 3            | [Issue 75](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/75) | Done   | Ebram Mekhail (ebrammekhail) | 5/3/23      | 5/3/23       | duplicate                  | Removed duplicate github actions that were not working                  |
 | Implemented Internationalization                             | 8            | [Issue 67](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/67) | Done   | Aryan Nesti (aryannesti) | 5/3/23      | 5/3/23       | user story                  | Used i18next to add multiple languages                  |
+| Implemented Google Search Console                             | 3            | [Issue 67](https://github.com/NJIT-WIS/project-2-is-219-sea/issues/67) | Done   | Aryan Nesti (aryannesti) | 5/3/23      | 5/3/23       | devops                  | Added Google Search Console meta tag                  |
 
 
 
@@ -52,7 +53,7 @@ member made adequate and equal contributions to the project.
 | --------------------------   | ------------------ |
 | Stephen Ebrahim (se6-njit)   | 77                 |
 | Ebram Mekhail (ebrammekhail) | 54                 |
-| Aryan Nesti                  | 38                 |
+| Aryan Nesti                  | 41                 |
 
 ## Productivity Rating Calculation
 
@@ -64,4 +65,4 @@ member made adequate and equal contributions to the project.
 | -------------------------- | -------------- |
 | Stephen Ebrahim (se6-njit) | 77 / 18 = 4.28 |
 | Ebram Mekhail              | 54 / 11 = 4.9  |
-| Aryan Nesti                | 38 / 8 = 4.75  |
+| Aryan Nesti                | 41 / 9 = 4.55  |
