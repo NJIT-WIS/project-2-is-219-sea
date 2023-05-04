@@ -4,6 +4,8 @@ import "../styles/prism.css";
 
 // next components
 import Head from "next/head";
+import { appWithTranslation } from "next-i18next"
+
 
 // node packages
 import { ThemeProvider } from "next-themes";
@@ -15,7 +17,7 @@ import PageWrapper from "../components/PageWrapper";
 import siteMetadata from "../data/siteMetadata";
 import GAScript from "../components/GoogleAnalytics";
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
       <Head>
@@ -28,3 +30,4 @@ export default function App({ Component, pageProps }) {
     </ThemeProvider>
   );
 }
+export default appWithTranslation(App);
