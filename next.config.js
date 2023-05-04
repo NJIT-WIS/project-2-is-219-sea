@@ -1,4 +1,3 @@
-const {i18n} = require("./next-i18next.config")
 module.exports = {
   webpack(config) {
     config.module.rules.push({
@@ -14,5 +13,4 @@ module.exports = {
     MAILCHIMP_API_SERVER: process.env.MAILCHIMP_API_SERVER,
     MAILCHIMP_AUDIENCE_ID: process.env.MAILCHIMP_AUDIENCE_ID,
   },
-  i18n,
 };
