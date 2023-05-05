@@ -11,9 +11,9 @@ import SubscribeModal from "../components/SubscribeModal";
 import { getSortedPostsData } from "../lib/posts";
 
 // images / svgs
-import tejPic from "../public/images/tej_patel.png";
-import marioPic from "../public/images/salah.png";
-import rachealPic from "../public/images/racheal.png";
+import tejPic from "../public/images/tej_patel.jpg";
+import marioPic from "../public/images/salah.jpg";
+import rachealPic from "../public/images/racheal.jpg";
 import UndrawTeaching from "../public/svgs/undraw_educator.svg";
 import UndrawChecklist from "../public/svgs/undraw_checklist.svg";
 import ReactStars from "react-stars";
@@ -152,7 +152,7 @@ export default function Home() {
             <Image
               priority
               src={tejPic}
-              className="rounded-full mb-4"
+              className="rounded-full mb-4 w-[130px] h-[130px] object-cover"
               height={130}
               alt={"Tej Patel"}
             />
@@ -171,7 +171,7 @@ export default function Home() {
             <Image
               priority
               src={rachealPic}
-              className="rounded-full mb-4"
+              className="rounded-full mb-4 w-[130px] h-[130px] object-cover"
               height={130}
               alt={"Racheal Fekri"}
             />
@@ -189,7 +189,7 @@ export default function Home() {
             <Image
               priority
               src={marioPic}
-              className="rounded-full mb-4"
+              className="rounded-full mb-4 w-[130px] h-[130px] object-cover"
               height={130}
               alt={"Mario Salah"}
             />
