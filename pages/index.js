@@ -144,7 +144,7 @@ export default function Home() {
       </div>
       <hr className="lg:hidden w-1/2 h-1 mx-auto mb-4 dark:bg-gray-500 border-0 rounded bg-gray-400" />
       <div
-        className="flex justify-between gap-4 lg:flex-row flex-col mx-auto items-center xl:py-10 py-6 px-8 lg:px-0"
+        className="flex justify-between gap-4 lg:flex-row flex-col mx-auto items-center xl:py-10 py-6 px-4 lg:px-0"
         style={{ maxWidth: "1500px", animation: "transitionIn 1s" }}
       >
         <div className="bg-white rounded-lg shadow-2xl dark:bg-gray-800 mt-6 lg:w-1/3 w-full h-80">
@@ -153,7 +153,6 @@ export default function Home() {
               priority
               src={tejPic}
               className="rounded-full mb-4 w-[130px] h-[130px] object-cover"
-              height={130}
               alt={"Tej Patel"}
             />
             <p className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
@@ -172,7 +171,6 @@ export default function Home() {
               priority
               src={rachealPic}
               className="rounded-full mb-4 w-[130px] h-[130px] object-cover"
-              height={130}
               alt={"Racheal Fekri"}
             />
             <p className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
@@ -190,7 +188,6 @@ export default function Home() {
               priority
               src={marioPic}
               className="rounded-full mb-4 w-[130px] h-[130px] object-cover"
-              height={130}
               alt={"Mario Salah"}
             />
             <p className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
