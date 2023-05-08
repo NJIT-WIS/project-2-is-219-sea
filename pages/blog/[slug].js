@@ -108,6 +108,7 @@ function Post({ post, home }) {
         </div>
         {post.mainImage && (
           <Image
+            fetchPriority="low"
             className="m-8"
             width={600}
             height={350}

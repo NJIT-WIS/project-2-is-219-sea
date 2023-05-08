@@ -69,7 +69,10 @@ export default function Home() {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="google-site-verification" content="zo3akath6oM_ovbSiBakfiWSQuEREnwDsFM5r7AF1wY" />
+        <meta
+          name="google-site-verification"
+          content="zo3akath6oM_ovbSiBakfiWSQuEREnwDsFM5r7AF1wY"
+        />
       </Head>{" "}
       <Script
         src="https://connect.facebook.net/en_US/sdk.js"
@@ -150,7 +153,7 @@ export default function Home() {
         <div className="bg-white rounded-lg shadow-2xl dark:bg-gray-800 mt-6 lg:w-1/3 w-full h-80">
           <div className="flex flex-col items-center pt-10 pb-10">
             <Image
-              priority
+              fetchPriority="low"
               src={tejPic}
               className="rounded-full mb-4 w-[130px] h-[130px] object-cover"
               alt={"Tej Patel"}
@@ -168,7 +171,7 @@ export default function Home() {
         <div className="bg-white rounded-lg shadow-2xl dark:bg-gray-800 mt-6 lg:w-1/3 w-full h-80">
           <div className="flex flex-col items-center pt-10 pb-10">
             <Image
-              priority
+              fetchPriority="low"
               src={rachealPic}
               className="rounded-full mb-4 w-[130px] h-[130px] object-cover"
               alt={"Racheal Fekri"}
@@ -185,7 +188,7 @@ export default function Home() {
         <div className="bg-white rounded-lg shadow-2xl dark:bg-gray-800 mt-6 lg:w-1/3 w-full h-80">
           <div className="flex flex-col items-center pt-10 pb-10">
             <Image
-              priority
+              fetchPriority="low"
               src={marioPic}
               className="rounded-full mb-4 w-[130px] h-[130px] object-cover"
               alt={"Mario Salah"}

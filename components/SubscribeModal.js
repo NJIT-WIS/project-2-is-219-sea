@@ -245,12 +245,14 @@ const SubscribeModal = ({
                           >
                             Powered By &nbsp;
                             <Image
+                              fetchPriority="low"
                               src={MailChimpLogoDark}
                               className="hidden dark:inline"
                               style={{ maxWidth: "200px" }}
                               alt="Mail Chimp Dark Logo"
                             />
                             <Image
+                              fetchPriority="low"
                               src={MailChimpLogo}
                               className="block dark:hidden inline"
                               style={{ maxWidth: "200px" }}
