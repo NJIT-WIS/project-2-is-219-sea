@@ -1,3 +1,9 @@
+# IS 219 - Group SEA
+## GitHub Pages Link: https://njit-wis.github.io/project-2-is-219-sea/
+### Stephen Ebrahim (se6), Ebram Mekhail (egm5), Aryan Nesti (adn33)
+
+---
+
 # Project 2
 Please READ everything I am giving you and everyone needs to submit in Canvas.
 ## Install Instructions
