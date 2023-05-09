@@ -155,6 +155,8 @@ export default function Home() {
             <Image
               fetchPriority="low"
               src={tejPic}
+              width={130}
+              height={130}
               className="rounded-full mb-4 w-[130px] h-[130px] object-cover"
               alt={"Tej Patel"}
             />
@@ -173,6 +175,8 @@ export default function Home() {
             <Image
               fetchPriority="low"
               src={rachealPic}
+              width={130}
+              height={130}
               className="rounded-full mb-4 w-[130px] h-[130px] object-cover"
               alt={"Racheal Fekri"}
             />
@@ -190,6 +194,8 @@ export default function Home() {
             <Image
               fetchPriority="low"
               src={marioPic}
+              width={130}
+              height={130}
               className="rounded-full mb-4 w-[130px] h-[130px] object-cover"
               alt={"Mario Salah"}
             />
